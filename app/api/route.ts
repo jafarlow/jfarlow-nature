@@ -1,27 +1,31 @@
 import { NextResponse } from "next/server"
+import { BASE_URL, API_KEY, API_SECRET } from "../lib/auth"
 
-// using "as" here to get rid of default "string | undefined" type
-const CLOUD_NAME = process.env.CLOUD_NAME as string
-const API_KEY = process.env.API_KEY as unknown as number
-const API_SECRET = process.env.API_SECRET as string
+export async function GET(nextCursor?: string) {
+  const params = new URLSearchParams()
 
-const BASE_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}`
+  params.append('context', "true")
+  params.append('max_results', "2")
+  params.append('tags', "true")
+  if (nextCursor) {
+    params.append('next_cursor', nextCursor)
+  }
 
-export async function GET(req: Request) {
-  const res = await fetch(BASE_URL + '/resources/image', {
+  //! In GET requests, there can be no body, so all params must be passed in as part of the URL
+  const res = await fetch(BASE_URL + '/resources/image' + `?${params}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
       "Authorization": "Basic " + btoa(API_KEY+":"+API_SECRET)
     },
-    params: {
-      max_results: 12,
-      context: true,
-      next_cursor : req.query.next_cursor
-    }
+    // params: {
+    //   max_results: 12,
+    //   context: true,
+    //   next_cursor : req.query.next_cursor
+    // }
   })
 
-  const images: Todo[] = await res.json()
+  const images: Image[] = await res.json()
 
-  return NextResponse.json(todos)
+  return NextResponse.json(images)
 }
