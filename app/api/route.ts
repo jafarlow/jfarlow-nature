@@ -18,11 +18,6 @@ export async function GET(nextCursor?: string) {
       "Content-Type": "application/json",
       "Authorization": "Basic " + btoa(API_KEY+":"+API_SECRET)
     },
-    // params: {
-    //   max_results: 12,
-    //   context: true,
-    //   next_cursor : req.query.next_cursor
-    // }
   })
 
   const images: Image[] = await res.json()
