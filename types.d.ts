@@ -12,6 +12,15 @@ type Image = {
   height: number,
   folder: string,
   url: string,
-  secure_url: string
-  context: object
+  secure_url: string,
+  context: {
+    custom: {
+      alt: string,
+    },
+  },
+  metadata: {
+    caption: string,
+    country: [string],
+  },
+  tags?: [string],
 }
