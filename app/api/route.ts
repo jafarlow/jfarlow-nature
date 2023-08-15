@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { BASE_URL, API_KEY, API_SECRET } from "../lib/auth"
+import { nextCursor } from "../lib/auth"
 
 export async function GET() {
   const params = new URLSearchParams()
@@ -8,14 +9,14 @@ export async function GET() {
   // params.append('tags', "true")
   params.append('max_results', "1")
   params.append('expression', "birds")
-  
+
   //* Need to include [] so that with_field is treated as an array, not a string
   //* otherwise only the second with_field will be sent
-  params.append('with_field', "context")
-  params.append('with_field', "metadata")
+  params.append('with_field[]', "context")
+  params.append('with_field[]', "metadata")
 
   // if (nextCursor) {
-  //   params.append('next_cursor', nextCursor)
+    params.append('next_cursor', nextCursor)
   // }
 
   //! In GET requests, there can be no body, so all params must be passed in as part of the URL
@@ -27,7 +28,8 @@ export async function GET() {
     },
   })
 
+  //! NextResponse is needed for routing, but not for basic fetch()
   const responseJson = await res.json()
-
+  console.log("NEXT RESPONSE OBJ: ", NextResponse.json(responseJson))
   return NextResponse.json(responseJson)
 }
