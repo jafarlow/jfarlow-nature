@@ -1,6 +1,6 @@
 import { BASE_URL, API_KEY, API_SECRET } from "./auth"
 
-export const searchImages = async (searchValue:string, nextCursor?:string) => {
+export default async function searchImages (searchValue:string, nextCursor?:string) {
   const params = new URLSearchParams()
   
   // remember: "expression" is how the Cloudinary API refers to a search term
