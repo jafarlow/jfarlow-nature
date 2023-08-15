@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
+import searchImages from '../lib/searchImages'
 
 export default function Gallery() {
 
