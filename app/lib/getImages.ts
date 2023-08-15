@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server"
+// import { NextResponse } from "next/server"
 import { BASE_URL, API_KEY, API_SECRET } from "./auth"
 
 export default async function getImages(nextCursor?: string) {
@@ -22,5 +22,5 @@ export default async function getImages(nextCursor?: string) {
 
   const responseJson = await res.json()
 
-  return NextResponse.json(responseJson)
+  return responseJson
 }
