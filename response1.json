@@ -1,0 +1,50 @@
+{
+  "total_count": 30,
+  "time": 106,
+  "next_cursor": "c0748b7215f565694b552556d8fcbf2e9ccfda60b074d6c7082922556e9703416907e7e5f120723106ea6dd2be199197",
+  "resources": [
+    {
+      "asset_id": "09625185a99e24adccdd57720b792547",
+      "public_id": "birds/white-wagtail_mtnjjh",
+      "folder": "birds",
+      "filename": "white-wagtail_mtnjjh",
+      "format": "jpg",
+      "version": 1691169028,
+      "resource_type": "image",
+      "type": "upload",
+      "created_at": "2023-08-04T17:10:28+00:00",
+      "uploaded_at": "2023-08-04T17:10:28+00:00",
+      "bytes": 303941,
+      "backup_bytes": 0,
+      "width": 1620,
+      "height": 1080,
+      "aspect_ratio": 1.5,
+      "pixels": 1749600,
+      "context": {
+        "alt": "A wagtail stands on yellow-orange sand"
+      },
+      "url": "http://res.cloudinary.com/drhoch1am/image/upload/v1691169028/birds/white-wagtail_mtnjjh.jpg",
+      "secure_url": "https://res.cloudinary.com/drhoch1am/image/upload/v1691169028/birds/white-wagtail_mtnjjh.jpg",
+      "status": "active",
+      "access_mode": "public",
+      "access_control": null,
+      "etag": "554086785057d2e5d2d6c43b7ed76a7b",
+      "created_by": {
+        "access_key": "685622886393461",
+        "custom_id": "jacobafarlow+cloudinary@gmail.com",
+        "external_id": "f9e084cf52b7da388965ef4f673f33"
+      },
+      "uploaded_by": {
+        "access_key": "685622886393461",
+        "custom_id": "jacobafarlow+cloudinary@gmail.com",
+        "external_id": "f9e084cf52b7da388965ef4f673f33"
+      },
+      "last_updated": {
+        "context_updated_at": "2023-08-04T17:13:41+00:00",
+        "updated_at": "2023-08-04T17:13:41+00:00",
+        "tags_updated_at": "2023-08-04T17:13:41+00:00",
+        "metadata_updated_at": "2023-08-04T17:13:41+00:00"
+      }
+    }
+  ]
+}
