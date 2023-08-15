@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from 'react'
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
+import scientificRef from '../lib/scientificRef'
+import ImageViewer from '../components/ImageViewer'
 
 export default function Gallery() {
 

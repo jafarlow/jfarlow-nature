@@ -5,7 +5,7 @@
 import { CSSProperties, useCallback, useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import FocusTrap from "focus-trap-react";
-import scientificRef from "./helperFunction";
+import scientificRef from "../lib/scientificRef";
 
 interface IProps {
   src: string[];
