@@ -11,5 +11,6 @@ Need to build:
  - Footer
  - About (more fleshed out)
   - Test out functionality for rotating profile images at random
+ - Include the rest of the CSS from React/Node version of this project
 
 After it's up and running in dev with the code as is, need to explore how to componentize(?) parts of the code for simplification
