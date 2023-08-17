@@ -3,7 +3,7 @@
 // FocusTrap docs: https://github.com/focus-trap/focus-trap-react & https://github.com/focus-trap/focus-trap
 
 import { CSSProperties, useCallback, useEffect, useState } from "react";
-import styles from "./styles.module.css";
+import styles from "../page.module.css";
 import FocusTrap from "focus-trap-react";
 import scientificRef from "../lib/scientificRef";
 
