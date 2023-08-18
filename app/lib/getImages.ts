@@ -20,6 +20,8 @@ export default async function getImages(nextCursor?: string) {
     },
   })
 
+  if (!res.ok) throw new Error(`HTTP error: ${res.status}`)
+
   const responseJson = await res.json()
 
   return responseJson
