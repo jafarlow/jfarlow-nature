@@ -13,3 +13,4 @@ export default function About() {
 // Header
 // Photo -- perhaps randomized rotating image?
 // paragraphs
+// Link to the gallery
