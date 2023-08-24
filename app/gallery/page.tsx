@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
@@ -50,7 +51,6 @@ export default function Gallery() {
       
       // using the name as declared in the respone -- we don't have control over that
       setNextCursor(responseJson.next_cursor)
-      console.log("NEXT CURSOR: ", responseJson.next_cursor)
       const tagsJson = await getTags()
       // similar to the images, the tags are nested in the response under the "tags" array
       setTags(tagsJson.sort((a: any,b: any) => a - b))
@@ -60,7 +60,13 @@ export default function Gallery() {
 
   
   const handleLoadMoreButtonClick = async () => {
-    const responseJson = await getImages(nextCursor)
+    let responseJson: any = {}
+    // Admin & Search APIs have different length NC values
+    if (nextCursor.length > 64) {
+      responseJson = await searchImages(searchValue, nextCursor)
+    } else {
+      responseJson = await getImages(nextCursor)
+    }
     setImageList((currentImageList) => [...currentImageList, ...ordered(responseJson)])
     setNextCursor(responseJson.next_cursor)
   }
@@ -83,10 +89,12 @@ export default function Gallery() {
     }
   }
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>, nextCursor:string):Promise<any> => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>):Promise<any> => {
     e.preventDefault()
     if (searchValue && searchValue !== " ") {
-      const responseJson = await searchImages(searchValue, nextCursor)
+      // initial submit must have nextCursor be an empty string as Admin API NC is 64 chars but Search API NC is 96 chars
+      // which means we can't use the one from getImages()
+      const responseJson = await searchImages(searchValue, "")
 
       setImageList(responseJson.resources)
       setNextCursor(responseJson.next_cursor)
@@ -96,28 +104,19 @@ export default function Gallery() {
     if (searchValue === "" && imageList !== initialImageList) resetSearch()
   }
 
+// gets the initial batch of 12 images & save to state
   const resetSearch = async () => {
-    // gets the initial batch of 10 images & save to state
     const responseJson = await getImages("")
     setImageList(ordered(responseJson))
     setInitialImageList(ordered(responseJson))
-
-    // assign next_cursor value if it exists
-    setNextCursor(responseJson.next_cursor)
-
-    // clear the search term from the input field
-    setSearchValue('')
-
-    // clear checked status
-    setChecked([])
+    setNextCursor(responseJson.next_cursor) // assign next_cursor value if it exists
+    setSearchValue('') // clear the search term from the input field
+    setChecked([]) // clear checked status
   }
 
-  const clearSelection = async () => {
-    // clear the search term from the input field
-    setSearchValue('')
-
-    // clear checked status
-    setChecked([])
+  const clearSelection = async () => {    
+    setSearchValue('') // clear the search term from the input field
+    setChecked([]) // clear checked status
   }
 
   const openImageViewer = useCallback((index: any) => {
