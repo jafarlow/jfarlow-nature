@@ -8,15 +8,16 @@ export async function GET(req: NextApiRequest) {
   params.append('max_results', "1") //! UPDATE THIS # AFTER TESTING
   params.append('context', "true")
   
-  //* to pull out the nextCursor value passed into the request
-  const regex = /=(.+)/; // match '=' and capture everything that follows
-  const matcher = req.url?.match(regex)
-  
-  if (matcher) {
-    params.append("next_cursor", matcher[0].slice(1)) // getting rid of the = from the string & assigning it to next_cursor
+  //* parse the input req to get any params that were passed in
+  const requrl = new URLSearchParams(req.url)
+  const [ next_cursor ] = Array.from(requrl.values())
+
+  if (next_cursor) {
+    params.append("next_cursor", next_cursor) // getting rid of the = from the string & assigning it to next_cursor
   }
 
-  console.log("GET PARAMS: ", params)
+  // console.log("GET PARAMS: ", params)
+  // console.log("NEXT CURSOR: ", next_cursor ? next_cursor : "nah bro")
 
   const res = await fetch(BASE_URL + '/resources/image' + `?${params}`, {
     method: "GET",
