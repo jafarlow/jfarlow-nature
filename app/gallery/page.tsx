@@ -7,6 +7,7 @@ import searchImages from '../lib/searchImages'
 import scientificRef from '../lib/scientificRef'
 import ImageViewer from '../components/ImageViewer'
 import { useIsClient } from '../components/UseIsClient'
+import Tags from '../components/Tags'
 
 export default function Gallery() {
 
@@ -16,10 +17,10 @@ export default function Gallery() {
   // "next_cursor" is a hash value provided in the API response so long as there are more than the default 10 images in the grouping returned
   // subsequent images loads (or appending to the bottom of the view) means taking the "next_cursor" and using that as a query param in the API request
   // which basically says "start the next batch from here, please"
-  const [nextCursor, setNextCursor] = useState<any>(null)
+  const [nextCursor, setNextCursor] = useState<string>("")
 
   // get image tags for future filtering
-  const [tags, setTags] = useState<any>([])
+  const [tags, setTags] = useState<string[]>([])
   const [checked, setChecked] = useState<any>([])
   
   const [searchValue, setSearchValue] = useState<string>('')
@@ -42,28 +43,17 @@ export default function Gallery() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const responseJson = await getImages()
-      // const responseJson = await fetch('../api/get', {
-      //   method: "POST",
-      //   body: JSON.stringify({
-      //     "context": "true",
-      //     "max_results": "2",
-      //     "tags": "true"
-      //   }),
-      // })
-      //   .then(r => r.json())
-
-      // console.log(responseJson)
+      const responseJson = await getImages("") 
 
       setImageList(ordered(responseJson))
       setInitialImageList(ordered(responseJson))
       
       // using the name as declared in the respone -- we don't have control over that
       setNextCursor(responseJson.next_cursor)
-      
+      console.log("NEXT CURSOR: ", responseJson.next_cursor)
       const tagsJson = await getTags()
       // similar to the images, the tags are nested in the response under the "tags" array
-      setTags(tagsJson.tags.sort((a: any,b: any) => a - b))
+      setTags(tagsJson.sort((a: any,b: any) => a - b))
     }
     fetchData()
   }, [])
@@ -108,7 +98,7 @@ export default function Gallery() {
 
   const resetSearch = async () => {
     // gets the initial batch of 10 images & save to state
-    const responseJson = await getImages()
+    const responseJson = await getImages("")
     setImageList(ordered(responseJson))
     setInitialImageList(ordered(responseJson))
 
@@ -167,22 +157,7 @@ export default function Gallery() {
       {/* @ts-ignore: Unreachable code error */}
       <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form'>
         <label htmlFor="tagsearch" id="form-label">Filter by category:</label>
-        <div id="tags-wrapper">
-          {tags.map((tag:string) => (
-            <label key={Math.random()} htmlFor={tag} className={checked.includes(tag) ? "checked tag" : "tag"}>
-              <input 
-                type='checkbox'
-                checked={checked.includes(tag)}
-                className='test'
-                key={Math.random()}
-                name={tag}
-                id={tag}
-                onChange={updateTagSearch}
-              />
-              {tag.replace(/^./, tag[0].toUpperCase())}
-            </label>
-          ))} 
-        </div>
+        <Tags tags={tags} checked={checked} updateTagSearch={updateTagSearch}/>
         <div className="buttons-wrapper">
           <button type="submit" id="submit">Confirm selection</button>
           <button type="button" id="clear" onClick={clearSelection}>Clear selection</button>
