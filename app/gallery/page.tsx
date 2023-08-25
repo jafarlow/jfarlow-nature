@@ -162,7 +162,7 @@ export default function Gallery() {
       </form>
  
       {/* modify grid based (essentially) on mobile vs tablet or larger */}
-      {(window.innerWidth > 450  && window.innerHeight > 450)
+      {(window !== undefined && window.innerWidth > 450  && window.innerHeight > 450)
         ? <div className="image-grid">
             {imageList.map((image, index) => (
               <img 
