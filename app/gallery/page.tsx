@@ -1,11 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+
+import ImageViewer from '../components/ImageViewer'
+import Tags from '../components/Tags'
+
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
 import scientificRef from '../lib/scientificRef'
-import ImageViewer from '../components/ImageViewer'
 
 export default function Gallery() {
 
@@ -15,15 +19,15 @@ export default function Gallery() {
   // "next_cursor" is a hash value provided in the API response so long as there are more than the default 10 images in the grouping returned
   // subsequent images loads (or appending to the bottom of the view) means taking the "next_cursor" and using that as a query param in the API request
   // which basically says "start the next batch from here, please"
-  const [nextCursor, setNextCursor] = useState<any>(null)
+  const [nextCursor, setNextCursor] = useState<string>("")
 
-  // get image tags for future filtering
-  const [tags, setTags] = useState<any>([])
+  //* get image tags for search functionality
+  const [tags, setTags] = useState<string[]>([])
   const [checked, setChecked] = useState<any>([])
   
   const [searchValue, setSearchValue] = useState<string>('')
 
-  // for the image view overlay
+  //* for the image view overlay
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -38,24 +42,29 @@ export default function Gallery() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const responseJson = await getImages()
+      const responseJson = await getImages("") 
 
       setImageList(ordered(responseJson))
       setInitialImageList(ordered(responseJson))
       
       // using the name as declared in the respone -- we don't have control over that
       setNextCursor(responseJson.next_cursor)
-      
       const tagsJson = await getTags()
       // similar to the images, the tags are nested in the response under the "tags" array
-      setTags(tagsJson.tags.sort((a: any,b: any) => a - b))
+      setTags(tagsJson.sort((a: any,b: any) => a - b))
     }
     fetchData()
   }, [])
 
   
   const handleLoadMoreButtonClick = async () => {
-    const responseJson = await getImages(nextCursor)
+    let responseJson: any = {}
+    // Admin & Search APIs have different length NC values
+    if (nextCursor.length > 64) {
+      responseJson = await searchImages(searchValue, nextCursor)
+    } else {
+      responseJson = await getImages(nextCursor)
+    }
     setImageList((currentImageList) => [...currentImageList, ...ordered(responseJson)])
     setNextCursor(responseJson.next_cursor)
   }
@@ -78,10 +87,12 @@ export default function Gallery() {
     }
   }
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>, nextCursor:string):Promise<any> => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>):Promise<any> => {
     e.preventDefault()
     if (searchValue && searchValue !== " ") {
-      const responseJson = await searchImages(searchValue, nextCursor)
+      // initial submit must have nextCursor be an empty string as Admin API NC is 64 chars but Search API NC is 96 chars
+      // which means we can't use the one from getImages()
+      const responseJson = await searchImages(searchValue, "")
 
       setImageList(responseJson.resources)
       setNextCursor(responseJson.next_cursor)
@@ -91,28 +102,19 @@ export default function Gallery() {
     if (searchValue === "" && imageList !== initialImageList) resetSearch()
   }
 
+// gets the initial batch of 12 images & save to state
   const resetSearch = async () => {
-    // gets the initial batch of 10 images & save to state
-    const responseJson = await getImages()
+    const responseJson = await getImages("")
     setImageList(ordered(responseJson))
     setInitialImageList(ordered(responseJson))
-
-    // assign next_cursor value if it exists
-    setNextCursor(responseJson.next_cursor)
-
-    // clear the search term from the input field
-    setSearchValue('')
-
-    // clear checked status
-    setChecked([])
+    setNextCursor(responseJson.next_cursor) // assign next_cursor value if it exists
+    setSearchValue('') // clear the search term from the input field
+    setChecked([]) // clear checked status
   }
 
-  const clearSelection = async () => {
-    // clear the search term from the input field
-    setSearchValue('')
-
-    // clear checked status
-    setChecked([])
+  const clearSelection = async () => {    
+    setSearchValue('') // clear the search term from the input field
+    setChecked([]) // clear checked status
   }
 
   const openImageViewer = useCallback((index: any) => {
@@ -142,8 +144,7 @@ export default function Gallery() {
         return; // Quit when this doesn't handle the key event.
     }
 
-    // Cancel the default action to avoid it being handled twice
-    e.preventDefault()
+    e.preventDefault() // Cancel the default action to avoid it being handled twice
     return
   }
 
@@ -152,22 +153,7 @@ export default function Gallery() {
       {/* @ts-ignore: Unreachable code error */}
       <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form'>
         <label htmlFor="tagsearch" id="form-label">Filter by category:</label>
-        <div id="tags-wrapper">
-          {tags.map((tag:string) => (
-            <label key={Math.random()} htmlFor={tag} className={checked.includes(tag) ? "checked tag" : "tag"}>
-              <input 
-                type='checkbox'
-                checked={checked.includes(tag)}
-                className='test'
-                key={Math.random()}
-                name={tag}
-                id={tag}
-                onChange={updateTagSearch}
-              />
-              {tag.replace(/^./, tag[0].toUpperCase())}
-            </label>
-          ))} 
-        </div>
+        <Tags tags={tags} checked={checked} updateTagSearch={updateTagSearch}/>
         <div className="buttons-wrapper">
           <button type="submit" id="submit">Confirm selection</button>
           <button type="button" id="clear" onClick={clearSelection}>Clear selection</button>
@@ -176,7 +162,7 @@ export default function Gallery() {
       </form>
  
       {/* modify grid based (essentially) on mobile vs tablet or larger */}
-      {window.innerWidth > 450  && window.innerHeight > 450
+      {(window.innerWidth > 450  && window.innerHeight > 450)
         ? <div className="image-grid">
             {imageList.map((image, index) => (
               <img 

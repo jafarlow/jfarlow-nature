@@ -1,30 +1,14 @@
-import { BASE_URL, API_KEY, API_SECRET } from "./auth"
-
-export default async function searchImages (searchValue:string, nextCursor?:string) {
+export default async function searchImages(searchValue:string, nextCursor?:string) {
   const params = new URLSearchParams()
-  
-  // remember: "expression" is how the Cloudinary API refers to a search term
-  params.append('expression', searchValue)
 
-  //* Need to include [] so that with_field is treated as an array, not a string
-  //* otherwise only the second with_field will be sent
-  params.append('with_field[]', "context")
-  params.append('with_field[]', "metadata")
-
+  params.append("expression", searchValue)
   if (nextCursor) {
     params.append('next_cursor', nextCursor)
   }
 
-  const res = await fetch(BASE_URL + '/resources/search' + `?${params}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": "Basic " + btoa(API_KEY+":"+API_SECRET)
-    },
-  })
+  //TODO: add error handling
+  const res = await fetch("../api/search" + `?${params}`)
+  const resJson = await res.json()
 
-  // convert to JSON format
-  const responseJson = await res.json()
-
-  return responseJson
+  return resJson
 }
