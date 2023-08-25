@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server"
 import { BASE_URL, API_KEY, API_SECRET } from "../../lib/auth"
-import { NextApiRequest } from "next"
+import { NextRequest } from "next/server"
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: NextRequest) {
   const params = new URLSearchParams()
 
   params.append('max_results', "12")

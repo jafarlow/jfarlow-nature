@@ -1,9 +1,8 @@
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import { BASE_URL, API_KEY, API_SECRET } from "../../lib/auth"
-import { NextApiRequest } from "next"
 
 // TODO: clear console logs and update max_results value
-export async function GET(req: NextApiRequest) {
+export async function GET(req: NextRequest) {
   const params = new URLSearchParams()
 
   //* parse the input req to get any params that were passed in
