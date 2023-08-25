@@ -5,7 +5,7 @@ import { NextApiRequest } from "next"
 export async function GET(req: NextApiRequest) {
   const params = new URLSearchParams()
 
-  params.append('max_results', "1") //! UPDATE THIS # AFTER TESTING
+  params.append('max_results', "12")
   params.append('context', "true")
   
   //* parse the input req to get any params that were passed in

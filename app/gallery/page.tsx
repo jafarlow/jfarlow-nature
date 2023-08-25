@@ -2,13 +2,14 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+
+import ImageViewer from '../components/ImageViewer'
+import Tags from '../components/Tags'
+
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
 import scientificRef from '../lib/scientificRef'
-import ImageViewer from '../components/ImageViewer'
-import { useIsClient } from '../components/UseIsClient'
-import Tags from '../components/Tags'
 
 export default function Gallery() {
 
@@ -20,13 +21,13 @@ export default function Gallery() {
   // which basically says "start the next batch from here, please"
   const [nextCursor, setNextCursor] = useState<string>("")
 
-  // get image tags for future filtering
+  //* get image tags for search functionality
   const [tags, setTags] = useState<string[]>([])
   const [checked, setChecked] = useState<any>([])
   
   const [searchValue, setSearchValue] = useState<string>('')
 
-  // for the image view overlay
+  //* for the image view overlay
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -143,8 +144,7 @@ export default function Gallery() {
         return; // Quit when this doesn't handle the key event.
     }
 
-    // Cancel the default action to avoid it being handled twice
-    e.preventDefault()
+    e.preventDefault() // Cancel the default action to avoid it being handled twice
     return
   }
 

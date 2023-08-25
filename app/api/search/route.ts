@@ -13,7 +13,7 @@ export async function GET(req: NextApiRequest) {
 
   // remember: "expression" is how the Cloudinary API refers to a search term
   params.append('expression', expression)
-  params.append('max_results', "2") //! UPDATE THIS # AFTER TESTING
+  params.append('max_results', "12")
 
   //* Need to include [] so that with_field is treated as an array, not a string
   //* otherwise only the second with_field will be sent
