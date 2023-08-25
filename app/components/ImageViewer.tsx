@@ -2,6 +2,8 @@
 // Needed to customize support for figcaption, as well as allowing for alt tag data to make it from thumbnail view into lightbox view
 // FocusTrap docs: https://github.com/focus-trap/focus-trap-react & https://github.com/focus-trap/focus-trap
 
+/* eslint-disable @next/next/no-img-element */
+
 import { CSSProperties, useCallback, useEffect, useState } from "react";
 import styles from "../page.module.css";
 import FocusTrap from "focus-trap-react";

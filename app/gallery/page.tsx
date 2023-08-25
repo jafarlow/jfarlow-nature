@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from 'react'
 
 import ImageViewer from '../components/ImageViewer'
 import Tags from '../components/Tags'
+import NoSSRWrapper from '../components/NoSSRWrapper'
 
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
@@ -149,60 +150,62 @@ export default function Gallery() {
   }
 
   return (
-    <main className='App'>
-      {/* @ts-ignore: Unreachable code error */}
-      <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form'>
-        <label htmlFor="tagsearch" id="form-label">Filter by category:</label>
-        <Tags tags={tags} checked={checked} updateTagSearch={updateTagSearch}/>
-        <div className="buttons-wrapper">
-          <button type="submit" id="submit">Confirm selection</button>
-          <button type="button" id="clear" onClick={clearSelection}>Clear selection</button>
-          <button type="button" id="reset" onClick={resetSearch}>Reset page</button>
+    <NoSSRWrapper>
+      <main className='App'>
+        {/* @ts-ignore: Unreachable code error */}
+        <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form'>
+          <label htmlFor="tagsearch" id="form-label">Filter by category:</label>
+          <Tags tags={tags} checked={checked} updateTagSearch={updateTagSearch}/>
+          <div className="buttons-wrapper">
+            <button type="submit" id="submit">Confirm selection</button>
+            <button type="button" id="clear" onClick={clearSelection}>Clear selection</button>
+            <button type="button" id="reset" onClick={resetSearch}>Reset page</button>
+          </div>
+        </form>
+  
+        {/* modify grid based (essentially) on mobile vs tablet or larger */}
+        {(window !== undefined && window.innerWidth > 450  && window.innerHeight > 450)
+          ? <div className="image-grid">
+              {imageList.map((image, index) => (
+                <img 
+                  className='thumbnail'
+                  src={image.secure_url} 
+                  alt={image.context?.custom?.alt || image.context?.alt || ""} 
+                  onClick={ () => openImageViewer(index) }
+                  onKeyDown={ (event) => keyboardNav(event,index)}
+                  key={image.asset_id}
+                  tabIndex={0}
+                />
+              ))}
+            </div>
+
+          : <div className="mobile-image-grid">
+              {imageList.map((image) => (
+                <figure className="mobile-figure" key={Math.random()}>
+                  <img className="mobile-thumbnail" src={image.secure_url} alt={image.context?.custom?.alt || image.context?.alt || ""} />
+                  <figcaption className="mobile-caption">{scientificRef(image.metadata?.caption) ?? ''}</figcaption>
+                </figure>
+              ))}
+            </div>
+        }
+
+        <div className='lightbox'>
+          {isViewerOpen && (
+            <ImageViewer
+              src={ imageList }
+              currentIndex={ currentImage }
+              disableScroll={ true }
+              closeOnClickOutside={ true }
+              onClose={ closeImageViewer }
+              role="dialog"
+            />
+          )}
         </div>
-      </form>
- 
-      {/* modify grid based (essentially) on mobile vs tablet or larger */}
-      {(window.innerWidth > 450  && window.innerHeight > 450)
-        ? <div className="image-grid">
-            {imageList.map((image, index) => (
-              <img 
-                className='thumbnail'
-                src={image.secure_url} 
-                alt={image.context?.custom?.alt || image.context?.alt || ""} 
-                onClick={ () => openImageViewer(index) }
-                onKeyDown={ (event) => keyboardNav(event,index)}
-                key={image.asset_id}
-                tabIndex={0}
-              />
-            ))}
-          </div>
 
-        : <div className="mobile-image-grid">
-            {imageList.map((image) => (
-              <figure className="mobile-figure" key={Math.random()}>
-                <img className="mobile-thumbnail" src={image.secure_url} alt={image.context?.custom?.alt || image.context?.alt || ""} />
-                <figcaption className="mobile-caption">{scientificRef(image.metadata?.caption) ?? ''}</figcaption>
-              </figure>
-            ))}
-          </div>
-      }
+        {/* this syntax says both must be true (since nextCursor is the only one that could be false here, it's fine) */}
+        {nextCursor && <button className='load-more' onClick={handleLoadMoreButtonClick}>Load more images</button>}
 
-      <div className='lightbox'>
-        {isViewerOpen && (
-          <ImageViewer
-            src={ imageList }
-            currentIndex={ currentImage }
-            disableScroll={ true }
-            closeOnClickOutside={ true }
-            onClose={ closeImageViewer }
-            role="dialog"
-          />
-        )}
-      </div>
-
-      {/* this syntax says both must be true (since nextCursor is the only one that could be false here, it's fine) */}
-      {nextCursor && <button className='load-more' onClick={handleLoadMoreButtonClick}>Load more images</button>}
-
-    </main>
+      </main>
+    </NoSSRWrapper>
   )
 }
