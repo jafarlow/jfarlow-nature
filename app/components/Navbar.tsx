@@ -6,7 +6,9 @@ export default function Navbar() {
     <header className='header-section'>
       <div className="header-wrapper">
         <div className="placeholder" >
-          <img src="/jf-logo-white.png" alt=""/>
+          <Link href="/">
+            <img src="/jf-logo-white.png" alt=""/>
+          </Link>
         </div>
         <div className="headline">
           <h1>Jacob Farlow</h1>
