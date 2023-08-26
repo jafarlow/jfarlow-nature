@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 export const metadata: Metadata = {
   title: 'Jacob Farlow: Nature Photographer',
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body id='root'>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
