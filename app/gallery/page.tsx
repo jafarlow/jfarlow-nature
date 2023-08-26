@@ -46,8 +46,8 @@ export default function Gallery() {
   })
 
   useEffect(() => {
+    setBrowserWindow([window.innerWidth, window.innerHeight]) // calling it here so it allows for the app to build
     const fetchData = async () => {
-      setBrowserWindow([window.innerWidth, window.innerHeight]) // calling it here so it allows for the app to build
       const responseJson = await getImages("") 
 
       setImageList(ordered(responseJson))
