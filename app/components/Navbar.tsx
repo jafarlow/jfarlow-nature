@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <header className='header-section'>
       <div className="header-wrapper">
-        <div className="placeholder" >
+        <div className="logo" >
           <Link href="/">
             <img src="/jf-logo-white.png" alt=""/>
           </Link>
