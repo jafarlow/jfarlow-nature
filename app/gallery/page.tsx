@@ -7,7 +7,6 @@ import { useCallback, useEffect, useState } from 'react'
 
 import ImageViewer from '../components/ImageViewer'
 import Tags from '../components/Tags'
-// import NoSSRWrapper from '../components/NoSSRWrapper'
 
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
