@@ -168,7 +168,10 @@ export default function Gallery() {
 
       {/* modify grid based (essentially) on mobile vs tablet or larger */}
       {(browserWindow[0] > 450  && browserWindow[1] > 450)
-        ? <div className="image-grid">
+        ? 
+        <div className="grid-wrapper">
+          <p className="instruction">Select an image to view it in full screen</p>
+          <div className="image-grid">
             {imageList.map((image, index) => (
               <img 
                 className='thumbnail'
@@ -178,9 +181,12 @@ export default function Gallery() {
                 onKeyDown={ (event) => keyboardNav(event,index)}
                 key={image.asset_id}
                 tabIndex={0}
+                width={356}
+                height={238}
               />
             ))}
           </div>
+        </div>
 
         : <div className="mobile-image-grid">
             {imageList.map((image) => (
