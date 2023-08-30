@@ -6,16 +6,18 @@ export default function Home() {
     <main className='home'>
       <h2>Welcome!</h2>
       <HomeImage />
-      <p>Few things have brought such joy to my life as being out in nature with a camera, and I'd like to share the highlights with you. This photo gallery represents the very best of my photography across seven categories:</p>
-      <ul className="home-tags">
-        <li>Aquatic creatures</li>
-        <li>Birds</li>
-        <li>Flora</li>
-        <li>Fungi</li>
-        <li>Invertebrates</li>
-        <li>Landscapes</li>
-        <li>Non-avian vertebrates</li>
-      </ul>
+      <p>Few things have brought such joy to my life as being out in nature with a camera, and I'd like to share the highlights with you. This photo gallery represents the very best of my photography across seven categories:
+
+        <ul className="home-tags">
+          <li>Aquatic creatures</li>
+          <li>Birds</li>
+          <li>Flora</li>
+          <li>Fungi</li>
+          <li>Invertebrates</li>
+          <li>Landscapes</li>
+          <li>Non-avian vertebrates</li>
+        </ul>
+      </p>
       <p>I built this photo gallery as a way to blend Jacob as nature photographer with Jacob as software engineer.</p>
       <Link href="/gallery" className="load-more home-button">View the gallery</Link>
     </main>
