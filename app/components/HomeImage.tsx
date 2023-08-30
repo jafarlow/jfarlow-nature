@@ -21,6 +21,15 @@ export default function HomeImage() {
 
   return (
     // <img src={profilePic.path} alt={profilePic.alt} key={profilePic.id}/>
-    <Image src={profilePic.path || ""} alt={profilePic.alt || ""} key={profilePic.id} width={800} height={450} unoptimized={true} placeholder="blur" blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} className="profile-pic"/>
+    <Image 
+      src={profilePic.path || ""} 
+      alt={profilePic.alt || ""} 
+      key={profilePic.id} 
+      width={800} 
+      height={450} 
+      unoptimized={true} 
+      placeholder="blur" 
+      blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
+      className="profile-pic"/>
   )
 }
