@@ -1,5 +1,5 @@
 // Might need some tweaking here to account for custom fields I've enabled in Cloudinary, like with "context"
-type Image = {
+type CloudImage = {
   asset_id: string,
   public_id: string,
   format: string,
@@ -23,4 +23,12 @@ type Image = {
     country: [string],
   },
   tags?: [string],
+}
+
+type ProfilePic = {
+  id: number,
+  path: string,
+  name: string,
+  location: string,
+  alt: string,
 }
