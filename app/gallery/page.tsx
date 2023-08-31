@@ -13,6 +13,7 @@ import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
 import ImageGrid from '../components/ImageGrid'
+import Form from '../components/Form'
 
 export default function Gallery() {
 
@@ -156,15 +157,14 @@ export default function Gallery() {
   return (
     <main className='App'>
       {/* @ts-ignore: Unreachable code error */}
-      <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form'>
-        <label htmlFor="tagsearch" id="form-label">Filter by category:</label>
-        <Tags tags={tags} checked={checked} updateTagSearch={updateTagSearch}/>
-        <div className="buttons-wrapper">
-          <button type="submit" id="submit">Confirm selection</button>
-          <button type="button" id="clear" onClick={clearSelection}>Clear selection</button>
-          <button type="button" id="reset" onClick={resetSearch}>Reset page</button>
-        </div>
-      </form>
+      <Form 
+        tags={tags} 
+        checked={checked} 
+        updateTagSearch={updateTagSearch} 
+        handleFormSubmit={handleFormSubmit} 
+        clearSelection={clearSelection} 
+        resetSearch={resetSearch}
+      />
 
       {/* modify grid based (essentially) on mobile vs tablet or larger */}
       {(browserWindow[0] > 450  && browserWindow[1] > 450)
