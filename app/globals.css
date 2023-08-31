@@ -20,7 +20,6 @@ html, body {
   flex-direction: column;
   align-items: center;
   margin: 0 auto 2rem auto;
-  flex-grow: 1;
 }
 
 .home p {
@@ -42,6 +41,7 @@ h1 {
 h2 {
   font-size: 2rem;
   color: aliceblue;
+  text-align: center;
 }
 
 .header-section {
@@ -110,6 +110,7 @@ span {
   border-radius: 1rem;
   background-clip: border-box;
   box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
 .App {
