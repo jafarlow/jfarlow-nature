@@ -61,7 +61,7 @@
 }
 
 .navigation {
-  height: 80%;
+  height: 8rem;
   color: white;
   background-color: black;
   cursor: pointer;
@@ -103,7 +103,7 @@
   }
   .slide {
     /* to account for L/R nav buttons */
-    width: calc(100% - 6rem);
+    width: calc(100% - 8rem);
   }
   .image {
     width: 100%;
@@ -116,7 +116,8 @@
     height: auto;
   }
   .prev, .next {
-    height: 60%;
+    /* height: 60%; */
+    /* height: 128px; */
     padding: 0;
   }
 }

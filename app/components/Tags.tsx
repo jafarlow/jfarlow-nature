@@ -1,6 +1,6 @@
 type Props = {
   tags: string[],
-  checked: any[]
+  checked: any[],
   updateTagSearch: (e: { target: { id: string; }; }) => void
 }
 
