@@ -12,6 +12,7 @@ import MobileGrid from '../components/MobileGrid'
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
+import ImageGrid from '../components/ImageGrid'
 
 export default function Gallery() {
 
@@ -55,7 +56,6 @@ export default function Gallery() {
       // using the name as declared in the respone -- we don't have control over that
       setNextCursor(responseJson.next_cursor)
       const tagsJson = await getTags()
-      // similar to the images, the tags are nested in the response under the "tags" array
       setTags(tagsJson.sort((a: any,b: any) => a - b))
     }
     fetchData()
@@ -122,7 +122,7 @@ export default function Gallery() {
     setChecked([]) // clear checked status
   }
 
-  const openImageViewer = useCallback((index: any) => {
+  const openImageViewer = useCallback((index: number) => {
     setCurrentImage(index);
     setIsViewerOpen(true);
   }, []);
@@ -133,7 +133,7 @@ export default function Gallery() {
   };
 
   // event type inferred from context
-  const keyboardNav = (e: React.KeyboardEvent<HTMLImageElement>, index: any) => {
+  const keyboardNav = (e: React.KeyboardEvent<HTMLImageElement>, index: number) => {
     if (e.defaultPrevented) {
       return;
     }
@@ -168,34 +168,7 @@ export default function Gallery() {
 
       {/* modify grid based (essentially) on mobile vs tablet or larger */}
       {(browserWindow[0] > 450  && browserWindow[1] > 450)
-        ? 
-        <div className="grid-wrapper">
-          <p className="instruction">Select an image to view it in full screen</p>
-          <div className="image-grid">
-            {imageList.map((image, index) => (
-              <img 
-                className='thumbnail'
-                src={image.secure_url} 
-                alt={image.context?.custom?.alt || image.context?.alt || ""} 
-                onClick={ () => openImageViewer(index) }
-                onKeyDown={ (event) => keyboardNav(event,index)}
-                key={image.asset_id}
-                tabIndex={0}
-                width={356}
-                height={238}
-              />
-            ))}
-          </div>
-        </div>
-
-        // : <div className="mobile-image-grid">
-        //     {imageList.map((image) => (
-        //       <figure className="mobile-figure" key={Math.random()}>
-        //         <img className="mobile-thumbnail" src={image.secure_url} alt={image.context?.custom?.alt || image.context?.alt || ""} />
-        //         <figcaption className="mobile-caption">{scientificRef(image.metadata?.caption) ?? ''}</figcaption>
-        //       </figure>
-        //     ))}
-        //   </div>
+        ? <ImageGrid imageList={imageList} keyboardNav={keyboardNav} openImageViewer={openImageViewer} />
         : <MobileGrid imageList={imageList} />
       }
 
