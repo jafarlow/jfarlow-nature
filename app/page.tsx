@@ -18,7 +18,7 @@ export default function Home() {
           <li>Non-avian vertebrates</li>
         </ul>
       </p>
-      <p>I built this photo gallery as a way to blend Jacob as nature photographer with Jacob as software engineer.</p>
+      <p>Use the link below to take a look!</p>
       <Link href="/gallery" className="load-more home-button">View the gallery</Link>
     </main>
   )
