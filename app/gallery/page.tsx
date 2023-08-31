@@ -1,19 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
-export const dynamic = 'force-dynamic' //? might not need this
+// export const dynamic = 'force-dynamic' //? might not need this
 
 import { useCallback, useEffect, useState } from 'react'
 
-import ImageViewer from '../components/ImageViewer'
-import Tags from '../components/Tags'
+import Form from '../components/Form'
+import ImageGrid from '../components/ImageGrid'
 import MobileGrid from '../components/MobileGrid'
+import Lightbox from '../components/Lightbox'
 
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
-import ImageGrid from '../components/ImageGrid'
-import Form from '../components/Form'
 
 export default function Gallery() {
 
@@ -172,18 +171,7 @@ export default function Gallery() {
         : <MobileGrid imageList={imageList} />
       }
 
-      <div className='lightbox'>
-        {isViewerOpen && (
-          <ImageViewer
-            src={ imageList }
-            currentIndex={ currentImage }
-            disableScroll={ true }
-            closeOnClickOutside={ true }
-            onClose={ closeImageViewer }
-            role="dialog"
-          />
-        )}
-      </div>
+      {isViewerOpen && <Lightbox imageList={imageList} currentImage={currentImage} closeImageViewer={closeImageViewer}/>}
 
       {/* this syntax says both must be true (since nextCursor is the only one that could be false here, it's fine) */}
       {nextCursor && <button className='load-more' onClick={handleLoadMoreButtonClick}>Load more images</button>}
