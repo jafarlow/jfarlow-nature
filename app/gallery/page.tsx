@@ -7,11 +7,11 @@ import { useCallback, useEffect, useState } from 'react'
 
 import ImageViewer from '../components/ImageViewer'
 import Tags from '../components/Tags'
+import MobileGrid from '../components/MobileGrid'
 
 import getImages from '../lib/getImages'
 import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
-import scientificRef from '../lib/scientificRef'
 
 export default function Gallery() {
 
@@ -188,14 +188,15 @@ export default function Gallery() {
           </div>
         </div>
 
-        : <div className="mobile-image-grid">
-            {imageList.map((image) => (
-              <figure className="mobile-figure" key={Math.random()}>
-                <img className="mobile-thumbnail" src={image.secure_url} alt={image.context?.custom?.alt || image.context?.alt || ""} />
-                <figcaption className="mobile-caption">{scientificRef(image.metadata?.caption) ?? ''}</figcaption>
-              </figure>
-            ))}
-          </div>
+        // : <div className="mobile-image-grid">
+        //     {imageList.map((image) => (
+        //       <figure className="mobile-figure" key={Math.random()}>
+        //         <img className="mobile-thumbnail" src={image.secure_url} alt={image.context?.custom?.alt || image.context?.alt || ""} />
+        //         <figcaption className="mobile-caption">{scientificRef(image.metadata?.caption) ?? ''}</figcaption>
+        //       </figure>
+        //     ))}
+        //   </div>
+        : <MobileGrid imageList={imageList} />
       }
 
       <div className='lightbox'>
