@@ -99,7 +99,7 @@ nav {
   color: aliceblue;
   padding: 1rem;
   margin: 0.5rem;
-  border: #3daee9 2px solid;
+  /* border: #3daee9 2px solid; */ /* For helping to visualize testing */
   box-sizing: border-box;
 }
 
@@ -277,6 +277,7 @@ figcaption {
 .mobile-thumbnail {
   display: block;
   max-width: 25rem;
+  height: auto;
   box-sizing: border-box;
   border-top: 0.125rem solid black;
   border-left: 0.125rem solid black;
