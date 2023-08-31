@@ -27,6 +27,10 @@ html, body {
   margin: 0 auto;
 }
 
+.home-tags {
+  width: 100%;
+}
+
 .home-button {
   color: black;
   background-color: #e9e9ed;
@@ -408,6 +412,10 @@ footer {
   }
 
   .profile-pic {
+    max-width: 85%;
+  }
+
+  .home-tags {
     max-width: 85%;
   }
 
