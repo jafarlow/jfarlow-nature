@@ -139,7 +139,7 @@ span {
 }
 
 form button {
-  font-size: 1.0125rem;
+  font-size: 1.125rem;
   margin: 0.5rem;
   padding: 0.75rem;
   border: 0.125rem solid black;
@@ -157,6 +157,7 @@ p {
   border-bottom: 0.0125rem solid aliceblue;
   padding-bottom: 0.5rem;
   min-height: 100px;
+  font-size: 1.125rem;
 }
 
 #form-label {
@@ -177,7 +178,7 @@ input[type="checkbox"] {
   color: black;
   background-color: #e9e9ed;
   margin: 0.5rem;
-  padding: 0.875rem;
+  padding: 0.875rem 0.5rem;
   border: 0.125rem solid black;
   border-radius: 0.33rem;
   text-align: center;
