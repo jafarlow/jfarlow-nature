@@ -121,6 +121,7 @@ span {
 }
 
 .App {
+  width: 92rem;
   max-width: 92rem;
   min-height: 100%;
   display: flex;
@@ -243,6 +244,7 @@ label:focus-within,
 }
 
 .image-grid {
+  width: 92rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
@@ -337,6 +339,12 @@ footer {
   fill: purple;
 }
 
+@media (max-width: 95rem) {
+  .App, .image-grid, .tags-form {
+    width: auto;
+  }
+}
+
 @media (max-width: 1081px) {
   .logo {
     display: none;
@@ -354,13 +362,16 @@ footer {
   footer p {
     font-size: 1rem;
   }
+
   .tags-wrapper {
     width: 80%;
     flex-wrap: wrap;
   }
+
   .tag {
     font-size: 1rem;
   }
+
   .image-grid {
     margin-right: 1rem;
     margin-left: 1rem;
