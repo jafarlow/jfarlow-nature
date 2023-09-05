@@ -1,14 +1,19 @@
+import tags from "../../tags.json"
+
 type Props = {
-  tags: string[],
   checked: any[],
   updateTagSearch: (e: { target: { id: string; }; }) => void
 }
 
-export default function Tags({tags, checked, updateTagSearch}: Props) {
+export default function Tags({checked, updateTagSearch}: Props) {
+  // need to double call it for some odd reason...
+  const tagsList = tags.tags
+
+  // TODO: Check if className of "test" is still needed here...
   return (
     <div id="tags-wrapper">
-      {tags.map((tag:string) => (
-        <label key={Math.random()} htmlFor={tag} className={checked.includes(tag) ? "checked tag" : "tag"}>
+      {tagsList.map((tag:string, index) => (
+        <label key={index} htmlFor={tag} className={checked.includes(tag) ? "checked tag" : "tag"}>
           <input 
             type='checkbox'
             checked={checked.includes(tag)}
@@ -18,7 +23,7 @@ export default function Tags({tags, checked, updateTagSearch}: Props) {
             id={tag}
             onChange={updateTagSearch}
           />
-          {tag.replace(/^./, tag[0].toUpperCase())}
+          {tag}
         </label>
       ))} 
     </div>

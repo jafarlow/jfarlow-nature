@@ -11,7 +11,6 @@ import MobileGrid from '../components/MobileGrid'
 import Lightbox from '../components/Lightbox'
 
 import getImages from '../lib/getImages'
-import getTags from '../lib/getTags'
 import searchImages from '../lib/searchImages'
 
 export default function Gallery() {
@@ -24,8 +23,7 @@ export default function Gallery() {
   // which basically says "start the next batch from here, please"
   const [nextCursor, setNextCursor] = useState<string>("")
 
-  //* get image tags for search functionality
-  const [tags, setTags] = useState<string[]>([])
+  //* modify tags for search functionality
   const [checked, setChecked] = useState<any>([])
   
   const [searchValue, setSearchValue] = useState<string>('')
@@ -55,8 +53,6 @@ export default function Gallery() {
       
       // using the name as declared in the respone -- we don't have control over that
       setNextCursor(responseJson.next_cursor)
-      const tagsJson = await getTags()
-      setTags(tagsJson.sort((a: any,b: any) => a - b))
     }
     fetchData()
   }, [])
@@ -157,7 +153,6 @@ export default function Gallery() {
     <main className='App'>
       {/* @ts-ignore: Unreachable code error */}
       <Form 
-        tags={tags} 
         checked={checked} 
         updateTagSearch={updateTagSearch} 
         handleFormSubmit={handleFormSubmit} 
