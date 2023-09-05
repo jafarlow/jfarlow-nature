@@ -35,6 +35,7 @@ export default function About() {
       <p>TOPIC: travels, photo subjects/targets, successes & frustrations</p>
       <p>Hitting it big right off the bat like this (only 6 months of owning the camera) set myself up to be humbled, experiencing my own version of the Dunning-Kruger Effect. While I saved my ego by not broadcasting to others how great I thought myself, I fell victim to overconfidence internally, and so when subsequent forays into beautiful places didn't render the same astounding results I had some emotional damage control to do. Intense self reflection combined with treating each excursion as a learning opportunity righted the ship, so to speak, and quickly converted frustrations into improvements.</p>
       <p>TOPIC: BBC docs</p>
+      <p>Since the BBC launched <i>Planet Earth</i> in 2006 I've been fascinated with natural history documentaries. It took hold in a big way in 2019 as I found sources for much of the BBC's legacy content and "smaller" programs, which led to me binge watching these nearly every day for over a year as I worked through the catalogue. Most pivotal for me during this period was exposure to their Watch series--<i>Springwatch</i>, <i>Autumnwatch</i>, and <i>Winterwatch</i>--whose focus turns in a different direction than the major productions to which I was accustomed. Rather than being centered on "exotic" wildlife from remote locations, the Watch series is all about local nature and wildlife, those things folks can observe themselves without great expense or difficulty. It flipped a switch in my mind: I could do this too; I have local wildlife, I could do my own exploring! It seems like a no-brainer after the fact, but up to this point photography to me generally meant a big effort excursion.</p>
       <p>TOPIC: borrowing Henry's lens</p>
 
       <h4>HEADING: taking the (financial) plunge redux</h4>
@@ -50,7 +51,9 @@ export default function About() {
       <p>When thinking about having a portfolio for my work, I spent a lot of time pondering how I would accomplish this. Would I use a webhost, whose specialty is catering to photographers like myself? Would I use a generic web template and then customize it to suit my needs?</p>
       <p>I decided on a third option, which was to build this from the ground up. This was the perfect opportunity to grow and expand my engineer skillset, to build something with a purpose.</p>
       <p>TOPIC: Cloudinary API & host</p>
+      <p><i>🎼It started with a whisperrrr...🎶</i> wait, no. It started with a tutorial. I wanted to learn more about backend engineering, to get re-exposed to Nodejs & Express. I found a video from Chris Blakely covering full stack development with React/Node/Express and this API called Cloudinary, which I had never heard of before then. {/*TALK ABOUT CUSTOM METADATA*/}</p>
       <p>TOPIC: Nextjs framework + TS</p>
+      <p>When it came time to deploy the project into production, I realized I hadn't taken into consideration what it means to have a full stack application running live--my previous experience was mostly with front-end only projects, plus a few minor backends from my time at General Assembly with student hosting on Heroku. I learned there's a big gap between local development and live deployment of a server, and came to the conclusion that I was going about it all wrong.</p>
       <p>TOPIC: serverless functions</p>
       <p>TOPIC: Overwriting ImageViewer to be accessible</p>
 
