@@ -9,6 +9,7 @@ export default function Tags({checked, updateTagSearch}: Props) {
   // need to double call it for some odd reason...
   const tagsList = tags.tags
 
+  // TODO: Check if className of "test" is still needed here...
   return (
     <div id="tags-wrapper">
       {tagsList.map((tag:string, index) => (
@@ -22,7 +23,7 @@ export default function Tags({checked, updateTagSearch}: Props) {
             id={tag}
             onChange={updateTagSearch}
           />
-          {tag.replace(/^./, tag[0].toUpperCase())}
+          {tag}
         </label>
       ))} 
     </div>
