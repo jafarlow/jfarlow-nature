@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function About() {
   return (
-    <div>
+    <main className="about">
       <h2>About the Project</h2>
 
       {/* TODO: link these to their subsections */}
@@ -47,7 +47,7 @@ export default function About() {
 
       <h4>HEADING: building this portfolio</h4>
       <p>TOPIC: Cloudinary API & host</p>
-      <p><i>🎼It started with a whisperrrr...🎶</i> Wait, no. It started with a tutorial. I wanted to learn more about backend engineering, to get re-exposed to Nodejs & Express. I found a video from Chris Blakely covering full stack development with React/Node/Express to build out a photo gallery, and an API called Cloudinary, which I had never heard of before then. Given my background (see the wall of text above) I was immediately interested. Afterall, one of the fundamental things about how I learn is to establish a personal connection to the subject matter. I like coding along to tutorials like this one as a way to learn how other people structure their code, and how they go from a blank file to a completed project. And once I've reached the end of a tutorial, I take it farther: Is it accessible? Are there edge cases that need to be considered? How can I expand upon or otherwise modify what I coded along with? Can I incorporate something from one tutorial into another one? Are there projects I already have completed that could be refactored with my new experience?</p>
+      <p>🎼 <i>It started with a whisperrrr...</i> 🎶 <br /> Wait, no. It started with a tutorial. I wanted to learn more about backend engineering, to get re-exposed to Nodejs & Express. I found a video from Chris Blakely covering full stack development with React/Node/Express to build out a photo gallery, and an API called Cloudinary, which I had never heard of before then. Given my background (see the wall of text above) I was immediately interested. Afterall, one of the fundamental things about how I learn is to establish a personal connection to the subject matter. I like coding along to tutorials like this one as a way to learn how other people structure their code, and how they go from a blank file to a completed project. And once I've reached the end of a tutorial, I take it farther: Is it accessible? Are there edge cases that need to be considered? How can I expand upon or otherwise modify what I coded along with? Can I incorporate something from one tutorial into another one? Are there projects I already have completed that could be refactored with my new experience?</p>
       <p>This project was no different, and it was during these explorations that I decided to upgrade this from a practice project to something I wanted to publish to the world. More specifically, the idea took root when I was exploring Cloudinary's capabilities and I learned I could add custom metadata fields. </p>
       {/*TALK ABOUT CUSTOM METADATA FIELDS*/}
       <p>When thinking about having a portfolio for my work, I spent a lot of time pondering how I would accomplish this. Would I use a webhost, whose specialty is catering to photographers like myself? Would I use a generic web template and then customize it to suit my needs?</p>
@@ -59,6 +59,6 @@ export default function About() {
 
 
       <Link href="/gallery" className="load-more home-button">View the gallery</Link>
-    </div>
+    </main>
   )
 }
