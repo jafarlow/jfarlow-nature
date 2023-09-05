@@ -6,7 +6,7 @@ export default function Home() {
     <main className='home'>
       <h2>Welcome!</h2>
       <HomeImage />
-      <p>Few things have brought such joy to my life as being out in nature with a camera, and I'd like to share the highlights with you. This photo gallery represents the very best of my photography across seven categories:</p>
+      <p>Few things have brought such joy to my life as being out in nature with a camera, and I'd like to share the highlights with you. With birds as my favored subject I have elected to separate them into their own category, and so this photo gallery, which represents the very best of my photography, is split into seven categories:</p>
         <ul className="home-tags">
           <li>Aquatic creatures</li>
           <li>Birds</li>
