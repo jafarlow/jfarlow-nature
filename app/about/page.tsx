@@ -5,23 +5,9 @@ import Image from "next/image"
 
 // extrapolating inline links out here so the body below looks cleaner
 import { dkEffect, jasNP, jasSE, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction } from "../components/AboutLinks"
+import { beforeMod, afterMod } from "../lib/codeBlocks"
 
 export default function About() {
-
-  const beforeMod =
-  `//BEFORE:
-<div className="content" onClick={handleClick}>
-  <div className="slide">
-    <img className="image" src={props.src[currentIndex]} alt="" />
-  </div>
-</div>`
-
-  const afterMod =         
-  `//AFTER:
-<figure className="figure" onClick={handleClick} tabIndex={0}>
-  <img className="image" src={image.secure_url} alt={image.context?.alt} />
-  <figcaption className="caption">{image.metadata?.caption}</figcaption>
-</figure>`
 
   return (
     <main className="about">
