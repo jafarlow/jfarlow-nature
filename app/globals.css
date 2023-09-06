@@ -110,7 +110,7 @@ span {
   font-style: italic;
 }
 
-.profile-pic {
+.local-loaded-pic {
   max-width: 100vw;
   height: auto;
   border: 2px black solid;
@@ -435,7 +435,7 @@ footer {
     max-width: 85%;
   }
 
-  .profile-pic {
+  .local-loaded-pic {
     max-width: 85%;
   }
 

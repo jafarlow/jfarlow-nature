@@ -30,6 +30,6 @@ export default function HomeImage() {
       unoptimized={true} 
       placeholder="blur" 
       blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
-      className="profile-pic"/>
+      className="local-loaded-pic"/>
   )
 }
