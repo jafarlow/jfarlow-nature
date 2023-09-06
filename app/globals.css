@@ -134,6 +134,10 @@ nav {
   color: aliceblue;
 }
 
+code {
+  background-color: 	rgba(195, 149, 153, 0.25);
+}
+
 span {
   font-style: italic;
 }
