@@ -106,9 +106,16 @@ nav {
   box-sizing: border-box;
 }
 
-.about {
+/* .about {
   background-color: rgba(0,0,0,0.65);
   padding: 0 3rem;
+} */
+
+.about-content-block {
+  width: 100%;
+  background-color: rgba(0,0,0,0.55);
+  padding: 0 3rem;
+  margin-top: 2rem;
 }
 
 .about-link {
@@ -403,7 +410,7 @@ footer {
 }
 
 @media (max-width: 950px) {
-  .about {
+  .about-test {
     padding: 0 1.5rem;
   }
 }
@@ -454,7 +461,7 @@ footer {
     max-width: 85vw;
   }
 
-  .about {
+  .about-test {
     padding: 0 2rem;
   }
 
@@ -520,7 +527,7 @@ footer {
     margin: 0 0 2rem 0;
   }
 
-  .about {
+  .about-test {
     padding: 0 1rem;
     text-align: justify;
   }
