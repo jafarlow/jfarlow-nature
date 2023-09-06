@@ -44,10 +44,14 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h2, h3 {
   font-size: 2rem;
   color: aliceblue;
   text-align: center;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 .header-section {
@@ -119,11 +123,15 @@ nav {
 }
 
 .about-link {
-  color: aliceblue;
+  color: #f963ff;
 }
 
 .about-link:hover {
-  color: #f963ff;
+  color: #fb4a4d;
+}
+
+.about-link:active {
+  color: aliceblue;
 }
 
 span {
@@ -410,7 +418,11 @@ footer {
 }
 
 @media (max-width: 950px) {
-  .about-test {
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  .about-content-block {
     padding: 0 1.5rem;
   }
 }
@@ -461,7 +473,7 @@ footer {
     max-width: 85vw;
   }
 
-  .about-test {
+  .about-content-block {
     padding: 0 2rem;
   }
 
@@ -497,6 +509,14 @@ footer {
     padding: 0;
     margin: 0 2rem;
   }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 451px) {
@@ -527,9 +547,13 @@ footer {
     margin: 0 0 2rem 0;
   }
 
-  .about-test {
+  .about-content-block {
     padding: 0 1rem;
+  }
+  
+  .about-content-block p {
     text-align: justify;
+    font-size: 1rem;
   }
 
   #tags-wrapper {
