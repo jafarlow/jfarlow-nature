@@ -5,6 +5,7 @@ import Image from "next/image"
 
 export default function About() {
   // extrapolating inline links out here so the body below looks cleaner
+  // Might even create a separate lib file and then import them into this one
   const dkEffect = (
     <Link 
       href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" 
@@ -14,16 +15,34 @@ export default function About() {
     </Link>
   )
 
+  const jasNP = (
+    <Link 
+      href="/about#nature-photographer" 
+      className="about-link" rel="internal"
+    >
+      Jacob as Nature Photographer
+    </Link>
+  )
+
+  const jasSE = (
+    <Link 
+      href="/about#software-engineer" 
+      className="about-link" rel="internal"
+    >
+      Jacob as Software Engineer
+    </Link>
+  )
+
   return (
     <main className="about">
       <div className="about-content-block">
         <h2>About the Project</h2>
 
         {/* TODO: link these to their subsections */}
-        <p>This project represents two parts of myself: Jacob as Nature Photographer, and Jacob as Software Engineer. What follows is a bit of autobiographical waxing poetic combined with being overly verbose. Classic Jacob.</p>
+        <p>This project represents two parts of myself: {jasNP}, and {jasSE}. What follows is a bit of autobiographical waxing poetic combined with being overly verbose. Classic Jacob.</p>
       </div>
 
-      <div className="about-content-block">
+      <div id="nature-photographer" className="about-content-block">
         <h3>Jacob as Nature Photographer--from the early days to now</h3>
         <h4>HEADING: the beginnings</h4>
         <p>My photography journey began when I was about 8 years old, though admittedly, it was probably more of a way for my parents to help me expend energy on family vacations. Prior to our departure, my folks would pack a treat bag full of snacks and puzzle games that were to last us the duration of whatever vaction we were embarking upon, and this included a disposable Kodak camera.</p> 
@@ -112,7 +131,7 @@ export default function About() {
         <p>TOPIC: the journey since</p>
       </div>
       
-      <div className="about-content-block">
+      <div id="software-engineer" className="about-content-block">
         <h3>Jacob as Software Engineer--no early days, just now</h3>
         <h4>HEADING: engineering overview</h4>
         <p>TOPIC: type of coding I do</p>
