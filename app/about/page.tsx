@@ -3,80 +3,16 @@
 import Link from "next/link"
 import Image from "next/image"
 
-//TODO: make Link text accessible
+// extrapolating inline links out here so the body below looks cleaner
+import { dkEffect, jasNP, jasSE, springwatch, autumnwatch, winterwatch, planetEarth } from "../components/AboutLinks"
 
 export default function About() {
-  // extrapolating inline links out here so the body below looks cleaner
-  // Might even create a separate lib file and then import them into this one
-  const dkEffect = (
-    <Link 
-      href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" 
-      className="about-link" target="_blank" rel="external"
-    >
-      Dunning-Kruger Effect.
-    </Link>
-  )
-
-  const jasNP = (
-    <Link 
-      href="/about#nature-photographer" 
-      className="about-link" rel="internal"
-    >
-      Jacob as Nature Photographer
-    </Link>
-  )
-
-  const jasSE = (
-    <Link 
-      href="/about#software-engineer" 
-      className="about-link" rel="internal"
-    >
-      Jacob as Software Engineer
-    </Link>
-  )
-
-  const planetEarth = (
-    <Link 
-      href="https://en.wikipedia.org/wiki/Planet_Earth_(2006_TV_series)" 
-      className="about-link" target="_blank" rel="external"
-    >
-      <i>Planet Earth</i>
-    </Link>
-  )
-
-  const springwatch = (
-    <Link 
-      href="https://www.bbc.co.uk/programmes/b007qgm3" 
-      className="about-link" target="_blank" rel="external"
-    >
-      <i>Springwatch</i>
-    </Link>
-  )
-
-  const autumnwatch = (
-    <Link 
-      href="https://www.bbc.co.uk/programmes/b0079t1p" 
-      className="about-link" target="_blank" rel="external"
-    >
-      <i>Autumnwatch</i>
-    </Link>
-  )
-
-  const winterwatch = (
-    <Link 
-      href="https://www.bbc.co.uk/programmes/p012msk2" 
-      className="about-link" target="_blank" rel="external"
-    >
-      <i>Winterwatch</i>
-    </Link>
-  )
 
   return (
     <main className="about">
       <div className="about-content-block">
         <h2>About the Project</h2>
 
-        {/* TODO: link these to their subsections */}
         <p>This project represents two parts of myself: {jasNP}, and {jasSE}. What follows is a bit of autobiographical waxing poetic combined with being overly verbose. Classic Jacob.</p>
       </div>
 
