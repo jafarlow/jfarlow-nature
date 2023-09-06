@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import Link from "next/link"
 import Image from "next/image"
 
@@ -149,14 +147,14 @@ export default function About() {
         
         <p>I made a design decision about how to display this caption. I did not want to sacrifice screen space by appending it below the image similar to what you may see on a news article; I wanted this to hover over a portion of the bottom of the image. I also wanted to allow the user to "dismiss" the caption and view the image without obstruction. I could achieve this by using a simple hover effect, so that when a user mouses over the image the caption appears, but this leaves out anyone who is navigating via keyboard.</p>
 
-        <p>The first step was to make the full screen image focusable, which is not a default setting for image content. This then gave access to the keyboard for triggering the caption to appear. But I still had a bit of a UX gap here. A mouse user could "stumble upon" the caption and make it visible, thus knowing this was an option. However, that is not a reliable method for keyboard users to interact with the content. I needed a way to <i>start</i> with the image receiving focus upon going into full screen so that the caption will be there by default--no need to discover that feature. And then the caption would disappear upon shifting focus away from the photo to one of the left/right navigation buttons.</p>
+        <p>The first step was to make the full screen image focusable, which is not a default setting for image content. This then gave access to the keyboard for triggering the caption to appear. But I still had a bit of a UX gap here. A mouse user could "stumble upon" the caption and make it visible, thus knowing this was an option. However, that is not a reliable method for keyboard users to interact with the content. I needed a way to <i>start</i> with the image receiving focus upon going into full screen view so that the caption will be there by default--no need to discover that feature. And then the caption would disappear upon shifting focus away from the photo to one of the left/right navigation buttons.</p>
 
         <p>After much trial and error and lost hours googling for tips and tricks, I remembered about the cornerstone of software d... Wait, this feels familiar... I know what to do! I found a package called <code>focus-trap-react</code> that, in this case, <i>did</i> perfectly suit my needs. In addition to applying focus to the photo when opened into full screen, it returns the focus to whichever element had focus when the trap was activated. Wahoo!</p>
       </section>
 
       <section className="about-content-block">
         <h4>Heading: Nextjs framework + TS</h4>
-        <p>When it came time to deploy the project into production, I realized I hadn't taken into consideration what it means to have a full stack application running live. I learned there's a big gap between local development and live deployment of a server. The scope of the project changed along the way--from practice project to full-fledged portfolio--and that first iteration was over-engineered. More specifically, I did not need to support a user's ability to make modifications to my database, such as adding, changing, or deleting images. I came to the conclusion that I was going about it all wrong. I took a page from the startup playbook, and tore it all down to rebuild from scratch, using a different tech setup.</p>
+        <p>When it came time to deploy the project into production, I realized I hadn't taken into consideration what it means to have a full stack application running live. I learned there's a big gap between local development and live deployment of a server. The scope of the project had also changed along the way--from practice project to full-fledged portfolio--and that first iteration was over-engineered. More specifically, I did not need to support a user's ability to make modifications to my database, such as adding, changing, or deleting images. I came to the conclusion that I was going about it all wrong. I took a page from the startup playbook, and tore it all down to rebuild from scratch, using a different tech setup.</p>
         <p>While I did not need to support a server being live all the time, I still needed to execute server-specific tasks. Next.js is a frontend framework built on top of React, and solves this problem specifically. It provides a framework experience and natively supports serverless functions so that data can be fetched securely without the financial and environmental costs of keeping a server up and running at all hours of the day.</p>
         <p>TOPIC: serverless functions</p>
         <p>MAYBE MOVE THIS PART AROUND ELSEWHERE</p>
@@ -168,7 +166,7 @@ export default function About() {
           These Functions are co-located with your code and part of your Git workflow. As traffic increases, they automatically scale up and down to meet your needs, helping you to avoid paying for always-on compute with no downtime.
         </blockquote>
 
-        <p>Unraveling error messages as I attempted to leverage these serverless functions drove a deeper understanding of the backend, and full stack development. This is also known as error driven design (EDD).</p>
+        <p>Unraveling error messages as I attempted to leverage these serverless functions--a form of error-driven design--drove a deeper understanding of the backend, how it functions, and how to interact with it.</p>
       </section>
 
       <Link href="/gallery" className="load-more home-button">View the gallery</Link>
