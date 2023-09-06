@@ -4,9 +4,24 @@ import Link from "next/link"
 import Image from "next/image"
 
 // extrapolating inline links out here so the body below looks cleaner
-import { dkEffect, jasNP, jasSE, springwatch, autumnwatch, winterwatch, planetEarth } from "../components/AboutLinks"
+import { dkEffect, jasNP, jasSE, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction } from "../components/AboutLinks"
 
 export default function About() {
+
+  const beforeMod =
+  `//BEFORE:
+<div className="content" onClick={handleClick}>
+  <div className="slide">
+    <img className="image" src={props.src[currentIndex]} alt="" />
+  </div>
+</div>`
+
+  const afterMod =         
+  `//AFTER:
+<figure className="figure" onClick={handleClick} tabIndex={0}>
+  <img className="image" src={image.secure_url} alt={image.context?.alt} />
+  <figcaption className="caption">{image.metadata?.caption}</figcaption>
+</figure>`
 
   return (
     <main className="about">
@@ -112,15 +127,17 @@ export default function About() {
         <h3>Jacob as Software Engineer: No early days, just now</h3>
         <h4>HEADING: engineering overview</h4>
         <p>TOPIC: type of coding I do</p>
-        <p>I write front-end code, and I focus on digital accessibility. I aspire to be a more well-rounded engineer so I can always be helpful on either side of the software stack. I crave understanding the "whys" behind the "whats". I derive much greater satisfaction in highlighting the successes, the wins large and small, of my colleagues than I ever do in highlighting my own. My existing projects are written in JavaScript or TypeScript, and usually leverage the React framework for frontend interactivity.</p>
+        <p>I write front-end code, and I focus on digital accessibility. I aspire to be a more well-rounded engineer so I can always be helpful on either side of the software stack, which makes sense as I crave understanding the "whys" behind the "whats", and deeper understanding leads to more versaility and usefulness. I derive much greater satisfaction in highlighting the successes, the wins large and small, of my colleagues than I ever do in highlighting my own. My existing projects are written in JavaScript or TypeScript, and usually leverage the React framework for frontend interactivity.</p>
         <p>TOPIC: searching for a project to build as practice</p>
         <p>In an ongoing effort to become that well-rounded engineer I easily find myself bouncing from one thing to the next. Should I learn python or Go? Should I dive into Node or Ruby? Hmmm, perhaps I should explore something related to database management? Choice paralysis hit pretty hard here. How would I break the impasse?</p>
       </section>
       
       <section className="about-content-block">
         <h4>Beginning to build this portfolio</h4>
-        <p>TOPIC: Cloudinary API & host</p>
-        <p>🎶 <i>It started with a whisperrrr...</i> 🎶 <br /> Wait, no. It started with a tutorial. I decided to learn more about backend engineering, to get re-exposed to Nodejs & Express as a way to strengthen my overall engineering self. I found a video from Chris Blakely covering full stack development with React/Node/Express to build out a photo gallery, as well as an API called Cloudinary, which I had never heard of before. Given my background (see the wall of text above) I was immediately interested. Afterall, one of the fundamental things about how I learn is to establish a personal connection to the subject matter. I like coding along to tutorials like this one as a way to learn how other people structure their code, and how they go from a blank file to a completed project. And once I've reached the end of a tutorial, I take it farther: Is it accessible? Are there edge cases that need to be considered? How can I expand upon or otherwise modify what I coded along with? Can I incorporate something from one tutorial into another one? Are there projects I have already completed that could be refactored with my new experience?</p>
+
+        <p>🎶 <i>It started with a whisperrrr...</i> 🎶 </p>
+
+        <p>Wait, no. It started with a tutorial. I decided to learn more about backend engineering, to get re-exposed to Nodejs & Express as a way to strengthen my overall engineering self. I found a video from Chris Blakely covering full stack development with React/Node/Express to build out a photo gallery, as well as an API called Cloudinary, which I had never heard of before. Given my background (see the wall of text above) I was immediately interested. Afterall, one of the fundamental things about how I learn is to establish a personal connection to the subject matter. I like coding along to tutorials like this one as a way to learn how other people structure their code, and how they go from a blank file to a completed project. And once I've reached the end of a tutorial, I take it farther: Is it accessible? Are there edge cases that need to be considered? How can I expand upon or otherwise modify what I coded along with? Can I incorporate something from one tutorial into another one? Are there projects I have already completed that could be refactored with my new experience?</p>
 
         <p>This project was no different, and it was during these explorations that I decided to upgrade this from a practice project to something I wanted to publish to the world. More specifically, the idea took root when I was exploring Cloudinary's capabilities. One of the key requirements for including images on a webpage is to include alternate (alt) text to go along with it. This is required for people who use screen readers to understand what the image is supposed to represent, and is generally helpful in case images are slow (or otherwise fail) to load. Every image includes metadata with it, and some will have more than others depending on how the image was created. For example, a photograph's metadata will include time & date information based on the camera's settings, information about the camera itself (make & model), as well as settings used at the time of capture (ISO, f-stop, shutter speed, etc).</p>
 
@@ -137,8 +154,13 @@ export default function About() {
         <p>TOPIC: Overwriting ImageViewer to be accessible</p>
         <p>There were two pieces absent from this package, one of which is mission critical. While their code allowed for supplying dynamic image information so a user could go from one image to the next, it <i>hard coded</i> the alt text to be an empty string. An empty string representing a deliberate absence of alt text is only acceptable for non-essential images. So it's particularly odd for this package, as the whole point is that the image is significant. I either needed to find a new source, or I could tweak it by hand. I chose the latter.</p>
 
-        <p>With open-source packages comes visibilty of the underlying code itself. My best recourse here was to copy in what I'll refer to as the baseline code, so that I could then force it to support basic accesibility practices. That resolved the mission critical piece. As I had pulled in the baseline code, I was then able to modify the entire structure of the component, so instead of simply being a full-screen image, I built in support for image context, like captioning text. Oh, hello Cloudinary custom metadata! It's good to see you again! </p>
+        <p>With open-source packages comes visibilty of the underlying code itself. My best recourse here was to copy in what I'll refer to as the baseline code, so that I could then force it to support basic accesibility practices. That resolved the mission critical piece. As I had pulled in the baseline code, I was then able to modify the entire structure of the component, so instead of simply being a full-screen image, I built in support for image context, like captioning text. Oh, hello Cloudinary custom metadata! It's good to see you again! Here's a simplified version of that modification:</p>
 
+        <pre role="code">{beforeMod}</pre>
+        <pre role="code">{afterMod}</pre>
+
+        <p>Even if you don't know much about code, you can look at this and understand semantically what's going on, and how <code>{`figure / img / figcaption`}</code> makes more sense and looks cleaner than <code>{`div / div / img`}</code>, while providing additional information via that caption.</p>
+        
         <p>I made a design decision about how to display this caption. I did not want to sacrifice screen space by appending it below the image similar to what you may see on a news article; I wanted this to hover over a portion of the bottom of the image. I also wanted to allow the user to "dismiss" the caption and view the image without obstruction. I could achieve this by using a simple hover effect, so that when a user mouses over the image the caption appears, but this leaves out anyone who is navigating via keyboard.</p>
 
         <p>The first step was to make the full screen image focusable, which is not a default setting for image content. This then gave access to the keyboard for triggering the caption to appear. But I still had a bit of a UX gap here. A mouse user could "stumble upon" the caption and make it visible, thus knowing this was an option. However, that is not a reliable method for keyboard users to interact with the content. I needed a way to <i>start</i> with the image receiving focus upon going into full screen so that the caption will be there by default--no need to discover that feature. And then the caption would disappear upon shifting focus away from the photo to one of the left/right navigation buttons.</p>
@@ -151,6 +173,16 @@ export default function About() {
         <p>When it came time to deploy the project into production, I realized I hadn't taken into consideration what it means to have a full stack application running live. I learned there's a big gap between local development and live deployment of a server. The scope of the project changed along the way--from practice project to full-fledged portfolio--and that first iteration was over-engineered. More specifically, I did not need to support a user's ability to make modifications to my database, such as adding, changing, or deleting images. I came to the conclusion that I was going about it all wrong. I took a page from the startup playbook, and tore it all down to rebuild from scratch, using a different tech setup.</p>
         <p>While I did not need to support a server being live all the time, I still needed to execute server-specific tasks. Next.js is a frontend framework built on top of React, and solves this problem specifically. It provides a framework experience and natively supports serverless functions so that data can be fetched securely without the financial and environmental costs of keeping a server up and running at all hours of the day.</p>
         <p>TOPIC: serverless functions</p>
+        <p>MAYBE MOVE THIS PART AROUND ELSEWHERE</p>
+        <p>While this was a full stack practice project designed to teach me more about backend coding that turned into a frontend portfolio without a dedicated backend, I learned far more about the backend by implementing serverless functions than I did from the tutorial. My data in Cloudinary is protected behind my user information. In order to access that for this portfolio, I needed to be able to tell Cloudinary that this application is in fact authorized to retrieve that data. Both Next.js and Cloudinary have built-in protections to block anyone from improperly executing a data fetch to protected content, and will throw errors when a fetch is called in an unsafe manner. Though serverless functions make it sound like it has nothing to do with backend code, they are in fact extracts of server-side code that will run without needing a dedicated server. As {serverlessFunction} </p> 
+
+        <blockquote>
+          Serverless Functions enable developers to write functions in JavaScript and other languages to handle user authentication, form submissions, database queries, custom Slack commands, and more. <br /> <br />
+
+          These Functions are co-located with your code and part of your Git workflow. As traffic increases, they automatically scale up and down to meet your needs, helping you to avoid paying for always-on compute with no downtime.
+        </blockquote>
+
+        <p>Unraveling error messages as I attempted to leverage these serverless functions drove a deeper understanding of the backend, and full stack development. This is also known as error driven design (EDD).</p>
       </section>
 
       <Link href="/gallery" className="load-more home-button">View the gallery</Link>

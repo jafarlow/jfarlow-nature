@@ -134,8 +134,14 @@ nav {
   color: aliceblue;
 }
 
-code {
+code, pre {
+  color: #f5fab3;
   background-color: 	rgba(195, 149, 153, 0.25);
+  font-size: 1.025rem;
+}
+
+pre {
+  overflow-x: scroll;
 }
 
 span {
@@ -521,6 +527,10 @@ footer {
   h4 {
     font-size: 1.25rem;
   }
+  
+  pre {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 451px) {
@@ -558,6 +568,10 @@ footer {
   .about-content-block p {
     text-align: justify;
     font-size: 1rem;
+  }
+
+  pre {
+    font-size: 0.9rem;
   }
 
   #tags-wrapper {

@@ -62,3 +62,12 @@ export const winterwatch = (
     <i>Winterwatch</i>
   </Link>
 )
+
+export const serverlessFunction = (
+  <Link 
+    href="https://vercel.com/docs/functions/serverless-functions" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Vercel puts it:
+  </Link>
+)
