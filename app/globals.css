@@ -28,7 +28,7 @@ html, body {
   margin: 0 auto;
 }
 
-.home-tags {
+.home-tags, .about-list {
   width: 100%;
   font-size: 1.125rem;
 }
@@ -491,7 +491,7 @@ footer {
     max-width: 85vw;
   }
 
-  .home-tags {
+  .home-tags, .about-list {
     max-width: 85%;
   }
 
@@ -567,6 +567,10 @@ footer {
   
   .about-content-block p {
     text-align: justify;
+    font-size: 1rem;
+  }
+
+  .about-list {
     font-size: 1rem;
   }
 
