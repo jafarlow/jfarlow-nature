@@ -2,18 +2,21 @@ import Link from "next/link"
 import Image from "next/image"
 
 // extrapolating inline links out here so the body below looks cleaner
-import { dkEffect, jasNP, jasSE, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU } from "../components/AboutLinks"
+import { dkEffect, jasNP, jasSE, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU, top } from "../components/AboutLinks"
 import { beforeMod, afterMod } from "../lib/codeBlocks"
 import AboutList from "../components/AboutList"
+import TableOfContents from "../components/TableOfContents"
 
 export default function About() {
 
   return (
     <main className="about">
       <div className="about-content-block">
-        <h2>About the Project</h2>
+        <h2 id="top">About the Project</h2>
 
         <p>This project represents two parts of myself: {jasNP}, and {jasSE}. What follows is a bit of autobiographical waxing poetic combined with being overly verbose. Classic Jacob.</p>
+
+        <TableOfContents />
       </div>
 
       <section id="nature-photographer" className="about-content-block">
@@ -23,11 +26,12 @@ export default function About() {
         <p>My photography journey began when I was about 8 years old, though admittedly, it was probably more of a way for my parents to help me expend energy on family vacations. Prior to our departure, my folks would pack a treat bag full of snacks and puzzle games that were to last us the duration of whatever vaction we were embarking upon, and this included a disposable Kodak camera.</p> 
 
         <p>Over many trips and the efforts of my mother to turn these rolls into scrapbooks, my folks must have seen something among the mess that resulted from a small rambunctious child given free reign to photograph whatever caught his eye. It was 'round about when I was 14 that my parents upgraded me from disposable Kodak to an Olympus digital point-and-shoot.</p>
+      
+        {top}
       </section>
       
-      <section className="about-content-block">
+      <section id="hobby" className="about-content-block">
         <h4>There just might be something in this here hobby</h4>
-        {/* <p>TOPIC: photo contest ski slope & Cedarock Park waterfall + painting</p> */}
         <p>Not long after this, I had the opportunity to bring my shiny new camera with me on the ski slopes of West Virginia's Winterplace ski resort. After tackling one of the runs, I turned around to look back up and thought to myself that it would make a pretty picture. I fell on my stomach, pulled out the camera, and snapped this photo:</p> 
 
         <Image 
@@ -72,9 +76,11 @@ export default function About() {
         />
 
         <p>In this moment I unlocked a new aspect of my photography: capturing moments of motion. It would take some dabbling in sports photography and plenty of "almost got it" experiences over the subsequent years before I would combine "movement" with "nature". But let's don't get ahead of the story.</p>
+      
+        {top}
       </section>
 
-      <section className="about-content-block">
+      <section id="plunge" className="about-content-block">
         <h4>Taking the (financial) plunge</h4>
         <p>The seed was planted about upgrading my camera once again when a family friend learned of my interest in photography. She had a DSLR (digital single-lens reflex) camera, and when my family went for a visit she suggested I give her camera a try. Aside from the joy in trying out a new camera, I was honored that someone would trust 16 year old me with such an expensive piece of equipment. I spent an entire afternoon traipsing about their garden and forested property delighting in the new views I could explore. It would take another 3 years, but I took that financial plunge and purchased a Canon 40D, with a 35-128mm telephoto lens. This was one model removed from state of the art in Canon's lineup (at the time), with the basic all-around lens for someone on a budget who wants to diversify their subject matter. An SLR or DSLR camera is special in that it allows for interchangeable lenses, enabling people to adjust their focus (pun absolutely intended!) and reach. Without needing to buy a whole new camera, a photographer can swap out compatible lenses.</p>
 
@@ -155,29 +161,35 @@ export default function About() {
         <p>I dabbled and explored, though nothing seemed to bring a sense of completeness. Despite everything that I was doing--and enjoying! Don't get me wrong there, I was loving it all the while--I had only found flowers to complement landscapes as something I loved to do, as something that delivered that contentment.</p>
 
         <p>Bodies in motion. That's what I wanted to shoot. And while I still bust out the camera for a little sportsing, I've found that the bodies in motion that really hit the spot for me are not human bodies. Rather, they are the mobile elements of nature.</p>
+      
+        {top}
       </section>
 
-      <section className="about-content-block">
+      <section id="connection" className="about-content-block">
         <h4>Connecting with nature</h4>
         <p>***perhaps needs something to fill between 2009 & 2019?</p>
-        <p>From the time I learned of the BBC's {planetEarth} in 2009 (thanks to the cool dude rockin' the Clemson t-shirt pictured above) I've been fascinated with natural history documentaries. Living in the US and pining for content fron the UK generally meant being left wanting. Only the big productions were made available internationally, and so all I was aware of were those landmark productions featuring box-office names as narrator/presenter. Anything I found that was not narrated/presented by a Hollywood icon or my hero, Sir David Attenborough, I stumbled into by roundabout means. Here are the ones I managed to get my hands on over the years:</p> 
+        <p>From the time I learned of the BBC's {planetEarth} in 2009 (thanks to the cool dude rockin' the Clemson t-shirt pictured above) I've been fascinated with natural history documentaries. Living in the US and pining for content fron the UK generally meant being left wanting. Only the big productions were made available internationally, and so all I was aware of were those landmark productions featuring box-office names as narrator. Anything I found that was not narrated by a Hollywood icon or my hero, Sir David Attenborough, I stumbled into by roundabout means. Here are the ones I managed to get my hands on over the years:</p> 
 
         <AboutList />
 
-        <p>This obsession with BBC-produced nature documentaries took hold in a big way in 2019 as I found sources for much of the BBC's legacy content and "smaller" programs, which led to me binge watch these nearly every day for over a year as I worked through the catalogue. Y'all, there are {bbcNHU} Most pivotal for me during this period was exposure to their annual Watch series--{springwatch}, {autumnwatch}, and {winterwatch}--whose focus turns in a different direction than the major productions to which I was accustomed. Rather than being centered on "exotic" wildlife from remote locations, the Watch series is all about local nature and wildlife, those things folks can observe themselves without great expense or difficulty. It flipped a switch in my mind: I could do this too; I have local wildlife, I could do my own exploring! It seems like a no-brainer after the fact, but up to this point photography to me generally meant a big effort excursion.</p>
+        <p>This fascination with BBC-produced nature documentaries took hold in a big way in 2019 as I found sources for much of the BBC's legacy content and "smaller" programs, which led to me binge watch these nearly every day for over a year as I worked through the catalogue. Y'all, there are {bbcNHU} Most pivotal for me during this period was exposure to their annual Watch series--{springwatch}, {autumnwatch}, and {winterwatch}--whose focus turns in a different direction than the major productions to which I was accustomed. Rather than being centered on "exotic" wildlife from remote locations, the Watch series is all about local nature and wildlife, those things folks can observe themselves without great expense or difficulty. It flipped a switch in my mind: I could do this too; I have local wildlife, I could do my own exploring! It seems like a no-brainer after the fact, but up to this point photography to me generally meant a big effort excursion. And with memory being the fragile thing that it is, I prefer to record my observations as digital memories so that I can revist them as time goes by.</p>
 
         <p>But what could I do about it? There were plenty of chances to stop and photograph the roses, which I've done quite often, and it wasn't leaving me terribly satisfied. I felt restricted to the beautiful, but immobile, side of the natural world. With patience and determination, I kept at it, still with that 35-128mm general purpose lens. Lenses are super expensive, so buying one on a whim wasn't something I was prepared to do. After all, what if I get the wrong one? What if I went for a macro lens and then found myself aching for long distance photography instead? What if I opted for a mega zoom upgrade, but then realized that I would much prefer to get up close and personal with the little things in life? I felt stuck.</p>
 
         <p>Serendipity has played a key role in my life as a photographer. Each step in this journey has been guided by a trusted adult saying something equivalent to, "would you like to try with this?" The first step was when my parents gave me a disposable Kodak. The second was when they gave me a digital point-and-shoot. The third was when a family friend let me try out their DSLR to see how I liked working with that type of camera. And now we come to step number four: my brother's father-in-law is a talented photographer himself. We all happened to be gathering by a rural lake in Virginia for a few days in the summer of 2019, and he watched me out stalking for something to photograph. After watching me try and fail to get close enough to some birds, he walked over with his camera bag, unzipped it, pulled out a massive telephoto lens and said, "would you like to try with this?" We both shoot on a Canon, so the lenses were compatible, and I felt like my teenage self all over again being trusted with a prized piece of equipment.</p>
         <p>I felt like I had been given glasses after a lifetime of fuzzy vision. I was grinning from ear to ear with just how much <i>range</i> I could get! The clarity and focus of things so far away brought near was such a fabulous experience. I was no longer at an impasse; I knew which direction I wanted to head. All I had to do was save. A lot. Patience, Jacob. Patience.</p>
+      
+        {top}
       </section>
       
-      <section className="about-content-block">
+      <section id="plunge-redux" className="about-content-block">
         <h4>Taking the (financial) plunge redux</h4>
         <p>TOPIC: new lens, new me</p>
         <p>TOPIC: the journey since</p>
         <p>TOPIC: Pulling it all together with a foray into the bogs of the Baltic</p>
         <p>TOPIC: IDs with Merlin & iNaturalist</p>
+      
+        {top}
       </section>
       
       <section id="software-engineer" className="about-content-block">
@@ -187,9 +199,11 @@ export default function About() {
         <p>I write front-end code, and I focus on digital accessibility. I aspire to be a more well-rounded engineer so I can always be helpful on either side of the software stack, which makes sense as I crave understanding the "whys" behind the "whats", and deeper understanding leads to more versaility and usefulness. I derive much greater satisfaction in highlighting the successes, the wins large and small, of my colleagues than I ever do in highlighting my own. My existing projects are written in JavaScript or TypeScript, and usually leverage the React framework for frontend interactivity.</p>
         <p>TOPIC: searching for a project to build as practice</p>
         <p>In an ongoing effort to become that well-rounded engineer I easily find myself bouncing from one thing to the next. Should I learn python or Go? Should I dive into Node or Ruby? Hmmm, perhaps I should explore something related to database management? Choice paralysis hit pretty hard here. How would I break the impasse?</p>
+      
+        {top}
       </section>
       
-      <section className="about-content-block">
+      <section id="portfolio" className="about-content-block">
         <h4>Beginning to build this portfolio</h4>
 
         <p>🎶 <i>It started with a whisperrrr...</i> 🎶 </p>
@@ -210,9 +224,11 @@ export default function About() {
           blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
           className="local-loaded-pic"
         />
+      
+        {top}
       </section>
 
-      <section className="about-content-block">
+      <section id="packages" className="about-content-block">
         <h4>There's a package for that</h4>
         <p>TOPIC: trying to build a full window image viewer on my lonesome</p>
         <p>One of the things I wanted to achieve with this portfolio is an intuitive way for a user to open an image in full screen mode on desktop (it doesn't make much sense to do so for mobile). After much trial and error and lost hours googling for tips and tricks, I remembered about the cornerstone of software development: open-source code. Surely there is someone out there who has built a project using the React framework who also wanted to achieve the same thing as me, and it was my hope that one of those someones published a package for others to use. Yes, there is! Huzzah!</p>
@@ -245,9 +261,11 @@ export default function About() {
         <p>The first step was to make the full screen image focusable, which is not a default setting for image content. This then gave access to the keyboard for triggering the caption to appear. But I still had a bit of a UX gap here. A mouse user could "stumble upon" the caption and make it visible, thus knowing this was an option. However, that is not a reliable method for keyboard users to interact with the content. I needed a way to <i>start</i> with the image receiving focus upon going into full screen view so that the caption will be there by default--no need to discover that feature. And then the caption would disappear upon shifting focus away from the photo to one of the left/right navigation buttons.</p>
 
         <p>After much trial and error and lost hours googling for tips and tricks, I remembered about the cornerstone of software d... Wait, this feels familiar... I know what to do! I found a package called <code>focus-trap-react</code> that, in this case, <i>did</i> perfectly suit my needs. In addition to applying focus to the photo when opened into full screen, it returns the focus to whichever element had focus when the trap was activated. Wahoo!</p>
+      
+        {top}
       </section>
 
-      <section className="about-content-block">
+      <section id="nextjs" className="about-content-block">
         <h4>Heading: Nextjs framework + TS</h4>
         <p>When it came time to deploy the project into production, I realized I hadn't taken into consideration what it means to have a full stack application running live. I learned there's a big gap between local development and live deployment of a server. The scope of the project had also changed along the way--from practice project to full-fledged portfolio--and that first iteration was over-engineered. More specifically, I did not need to support a user's ability to make modifications to my database, such as adding, changing, or deleting images. I came to the conclusion that I was going about it all wrong. I took a page from the startup playbook, and tore it all down to rebuild from scratch, using a different tech setup.</p>
         <p>While I did not need to support a server being live all the time, I still needed to execute server-specific tasks. Next.js is a frontend framework built on top of React, and solves this problem specifically. It provides a framework experience and natively supports serverless functions so that data can be fetched securely without the financial and environmental costs of keeping a server up and running at all hours of the day.</p>
@@ -262,6 +280,8 @@ export default function About() {
         </blockquote>
 
         <p>Unraveling error messages as I attempted to leverage these serverless functions--a form of error-driven design--drove a deeper understanding of the backend, how it functions, and how to interact with it.</p>
+      
+        {top}
       </section>
 
       <Link href="/gallery" className="load-more home-button">View the gallery</Link>

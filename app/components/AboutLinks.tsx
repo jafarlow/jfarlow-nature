@@ -2,6 +2,12 @@ import Link from "next/link";
 
 //* INTERNAL:
 
+export const top = (
+  <Link href="/about#top" className="about-link go-to-top" rel="internal">
+    <i>Return to top</i>
+  </Link>
+)
+
 export const jasNP = (
   <Link 
     href="/about#nature-photographer" 

@@ -1,5 +1,4 @@
 "use client"
-/* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
@@ -20,7 +19,6 @@ export default function HomeImage() {
   }, [])
 
   return (
-    // <img src={profilePic.path} alt={profilePic.alt} key={profilePic.id}/>
     <Image 
       src={profilePic.path || ""} 
       alt={profilePic.alt || ""} 
