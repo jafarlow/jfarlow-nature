@@ -4,6 +4,7 @@ import Image from "next/image"
 // extrapolating inline links out here so the body below looks cleaner
 import { dkEffect, jasNP, jasSE, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU } from "../components/AboutLinks"
 import { beforeMod, afterMod } from "../lib/codeBlocks"
+import AboutList from "../components/AboutList"
 
 export default function About() {
 
@@ -18,7 +19,7 @@ export default function About() {
       <section id="nature-photographer" className="about-content-block">
         <h3>Jacob as Nature Photographer: From the early days to now</h3>
         <h4>The Beginnings</h4>
-        
+
         <p>My photography journey began when I was about 8 years old, though admittedly, it was probably more of a way for my parents to help me expend energy on family vacations. Prior to our departure, my folks would pack a treat bag full of snacks and puzzle games that were to last us the duration of whatever vaction we were embarking upon, and this included a disposable Kodak camera.</p> 
 
         <p>Over many trips and the efforts of my mother to turn these rolls into scrapbooks, my folks must have seen something among the mess that resulted from a small rambunctious child given free reign to photograph whatever caught his eye. It was 'round about when I was 14 that my parents upgraded me from disposable Kodak to an Olympus digital point-and-shoot.</p>
@@ -160,20 +161,9 @@ export default function About() {
         <h4>Connecting with nature</h4>
         <p>***perhaps needs something to fill between 2009 & 2019?</p>
         <p>From the time I learned of the BBC's {planetEarth} in 2009 (thanks to the cool dude rockin' the Clemson t-shirt pictured above) I've been fascinated with natural history documentaries. Living in the US and pining for content fron the UK generally meant being left wanting. Only the big productions were made available internationally, and so all I was aware of were those landmark productions featuring box-office names as narrator/presenter. Anything I found that was not narrated/presented by a Hollywood icon or my hero, Sir David Attenborough, I stumbled into by roundabout means. Here are the ones I managed to get my hands on over the years:</p> 
-        {/* MAKE THIS ITS OWN COMPONENT, AND LINK THE TITLES OUT */}
-        <ul className="about-list">
-          <li>(2006) <i>Planet Earth,</i> narrated/presented by Sir David Attenborough</li>
-          <li>(2006) <i>Galápagos,</i> narrated by Tilda Swinton</li>
-          <li>(2007) <i>Earth: The Power of the Planet,</i> presented by Iain Stewart</li>
-          <li>(2008) <i>Wild China,</i> narrated by Bernard Hill</li>
-          <li>(2009) <i>South Pacific,</i> narrated by Benedict Cumberbatch</li>
-          <li>(2009) <i>Life,</i> narrated by Sir David Attenborough</li>
-          <li>(2011) <i>Human Planet,</i> narrated by John Hurt</li>
-          <li>(2011) <i>Frozen Planet,</i> narrated by Sir David Attenborough</li>
-          <li>(2013) <i>Africa,</i> narrated by Sir David Attenborough</li>
-          <li>(2016) <i>Planet Earth II,</i> narrated/presented by Sir David Attenborough</li>
-          <li>(2017) <i>Blue Planet II,</i> narrated/presented by Sir David Attenborough</li>
-        </ul>
+
+        <AboutList />
+
         <p>This obsession with BBC-produced nature documentaries took hold in a big way in 2019 as I found sources for much of the BBC's legacy content and "smaller" programs, which led to me binge watch these nearly every day for over a year as I worked through the catalogue. Y'all, there are {bbcNHU} Most pivotal for me during this period was exposure to their annual Watch series--{springwatch}, {autumnwatch}, and {winterwatch}--whose focus turns in a different direction than the major productions to which I was accustomed. Rather than being centered on "exotic" wildlife from remote locations, the Watch series is all about local nature and wildlife, those things folks can observe themselves without great expense or difficulty. It flipped a switch in my mind: I could do this too; I have local wildlife, I could do my own exploring! It seems like a no-brainer after the fact, but up to this point photography to me generally meant a big effort excursion.</p>
 
         <p>But what could I do about it? There were plenty of chances to stop and photograph the roses, which I've done quite often, and it wasn't leaving me terribly satisfied. I felt restricted to the beautiful, but immobile, side of the natural world. With patience and determination, I kept at it, still with that 35-128mm general purpose lens. Lenses are super expensive, so buying one on a whim wasn't something I was prepared to do. After all, what if I get the wrong one? What if I went for a macro lens and then found myself aching for long distance photography instead? What if I opted for a mega zoom upgrade, but then realized that I would much prefer to get up close and personal with the little things in life? I felt stuck.</p>
