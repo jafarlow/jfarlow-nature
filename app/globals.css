@@ -149,6 +149,26 @@ nav {
   margin-bottom: 2rem;
 }
 
+.about-fig {
+  width: min-content;
+  margin: 0 auto;
+}
+
+.about-pic {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.about-fig-cap {
+  width: 100%;
+  background-color: rgba(195, 149, 153, 0.25);
+  box-sizing: border-box;
+  border: 2px black solid;
+  border-top: none;
+  border-radius: 0 0 1rem 1rem;
+  min-height: 2rem;
+  padding: 0.5rem 1rem;
+}
+
 code, pre {
   color: #f5fab3;
   background-color: 	rgba(195, 149, 153, 0.25);
@@ -163,15 +183,22 @@ span {
   font-style: italic;
 }
 
-.local-loaded-pic {
+.local-loaded-pic, .about-pic {
   max-width: 100vw;
   height: auto;
   border: 2px black solid;
-  border-radius: 1rem;
   background-clip: border-box;
   box-sizing: border-box;
   margin: 0 auto;
   display: block; /* for horizontal centering w/o flex */
+}
+
+.local-loaded-pic {
+  border-radius: 1rem;
+}
+
+.about-pic {
+  border-radius: 1rem 1rem 0 0;
 }
 
 .App {
@@ -413,7 +440,7 @@ footer {
     margin: 0 2rem;
   }
 
-  .about, .local-loaded-pic {
+  .about, .local-loaded-pic, .about-pic {
     max-width: 85vw;
   }
 
@@ -507,9 +534,9 @@ footer {
     padding: 0 2rem;
   }
 
-  .local-loaded-pic {
+  /* .local-loaded-pic {
     max-width: 85vw;
-  }
+  } */
 
   .home-tags, .about-list {
     max-width: 85%;
