@@ -38,6 +38,15 @@ export const hobby = (
   </Link>
 )
 
+export const ids = (
+  <Link 
+    href="/about#making-ids" 
+    className="about-link" rel="internal"
+  >
+    What's that thing?
+  </Link>
+)
+
 export const nextjs = (
   <Link 
     href="/about#nextjs" 

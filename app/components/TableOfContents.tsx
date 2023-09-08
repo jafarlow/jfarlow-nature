@@ -1,5 +1,5 @@
 import { jasNP, jasSE } from "./AboutLinks";
-import { beginnings, connection, engineering, hobby, nextjs, packages, plunge, plungeRedux, portfolio } from "./TOCLinks";
+import { beginnings, connection, engineering, hobby, ids, nextjs, packages, plunge, plungeRedux, portfolio } from "./TOCLinks";
 
 export default function TableOfContents() {
   return (
@@ -14,6 +14,7 @@ export default function TableOfContents() {
           <li>{plunge}</li>
           <li>{connection}</li>
           <li>{plungeRedux}</li>
+          <li>{ids}</li>
         </ul>
         <li>{jasSE}</li>
         <ul>

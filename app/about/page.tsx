@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 // extrapolating inline links out here so the body below looks cleaner
-import { dkEffect, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU, top } from "../components/AboutLinks"
+import { dkEffect, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU, top, opportunityCost, iNaturalist, merlin, cornellLab, sexualDimorphism } from "../components/AboutLinks"
 import { beforeMod, afterMod } from "../lib/codeBlocks"
 import AboutList from "../components/AboutList"
 import TableOfContents from "../components/TableOfContents"
@@ -167,7 +167,6 @@ export default function About() {
 
       <section id="connection" className="about-content-block">
         <h4>Connecting with nature</h4>
-        <p>***perhaps needs something to fill between 2009 & 2019?</p>
         <p>From the time I learned of the BBC's {planetEarth} in 2009 (thanks to the cool dude rockin' the Clemson t-shirt pictured above) I've been fascinated with natural history documentaries. Living in the US and pining for content fron the UK generally meant being left wanting. Only the big productions were made available internationally, and so all I was aware of were those landmark productions featuring box-office names as narrator. Anything I found that was not narrated by a Hollywood icon or my hero, Sir David Attenborough, I stumbled into by roundabout means. Here are the ones I managed to get my hands on over the years:</p> 
 
         <AboutList />
@@ -184,20 +183,100 @@ export default function About() {
       
       <section id="plunge-redux" className="about-content-block">
         <h4>Taking the (financial) plunge redux</h4>
-        <p>TOPIC: new lens, new me</p>
-        <p>TOPIC: the journey since</p>
-        <p>TOPIC: Pulling it all together with a foray into the bogs of the Baltic</p>
-        <p>TOPIC: IDs with Merlin & iNaturalist</p>
+        <p>Also known as: new lens, new me.</p>
+        <p>It took two years of saving before I was in a position to upgrade to a new lens. I did extensive research of the different types of lenses, and what I could expect from them. There was one photographer's blog who wrote a really in-depth analysis of several of the lenses I had narrowed it down to (alas, I forgot who it was or I'd link it here). Based on what he worte and how he presented his test data and experimental efforts I was decided; I would get a 400mm lens. Aside from greater reach, this would always be at the 400mm mark, whereas my existing lens allowed me to vary that from 35 to 128mm; so basically greater reach with reduced lens versatility. I was pumped, and couldn't wait to buy it. I went to one online retailer. Oh, no, this isn't good. I went to another just in case. Oh, no, no. I went to a third to confirm the pattern. Oh, no, no, no. That lens costs as much as a quality used car. <em>Oof.</em></p>
+
+        <p>Okay, back to the article to revist what he wrote about my second option, the 100-400mm lens. I'm no technical expert when it comes to photography, so I make some assumptions I probably shouldn't.  What this means is that initially I assumed the 100-400mm was much better and, thus, far more expensive. Therefore, I had set that aside in favor of the lens that would still be good for me, but hopefully at a friendly-to-Jacob price point. Thankfully, I was very wrong. Coincidentally enough, the 100-400mm lens's focal length covers a range of a factor of 4 and that was also the price variance between the two lenses I was comparing. It was as if having the capability of modifying the focal length by 4x also reduced the price by 4x as well. I think the real reason is that the increased versatility leads to some loss in comparitive quality, but that might not be the complete picture (pun intended!).</p>
+
+        <p>Even though the lens I ultimately chose was four times less expensive, it remained a large financial investment. Like many things in life, in order to pursue one thing, we must refrain from pursuing another. In economics this can be referred to as an {opportunityCost}. Though it may seem like I'm being cavalier about upgrading to a very expensive lens, the reality is it was a culmination of careful longterm spending and saving, as well as forgoing future luxuries for a time. Some might not think a camera lens worth it, but for me this has been life changing.</p>
+        
+        <p>I'm not being hyperbolic here. Because I made this purchase, I am more connected to the natural world; I'm finding contentment and mental stability and peace from more than just sweeping, grandiose vistas I mentioned previously; I see the fragility and beauty in all that surrounds us; I'm constantly learning more about how interconnected life is, and how it's far more complex than I could ever hope to convey; I feel a sense of urgency regarding climate action (or lack thereof) because I feel better able to see just how we continue to senselessly damage and destroy our environment.</p>
+
+        <p>This last bit is the ultimate reason for this portfolio. It's a means to bring these emotional experiences and sense of wonder to a wider audience. It's my own small effort to replicate for others what those BBC natural history documentaries have done for me. Which is to say, when you can see the detail and put a name to a thing, you might feel more connected to that thing, and emotionally invested in its wellbeing. And it's particularly critical for those elements of nature that are essential for a healthy ecosystem, but we humans tend to treat as pests.</p>
+      </section>
+
+      <section id="making-ids" className="about-content-block">
+        <h4>What's that thing?</h4>
+        <p>Of course, in order to achieve my goal here I first must correctly identify what it is I have captured. I want to be able to go from "hmm yes, the floor is made of floor":</p>
+
+        <Image 
+          src="/about/floor-meme.jpg"
+          alt="A meme featuring Buzz Lightyear with a comically stretched-out face looking down at a quilted blanket."
+          width={800} 
+          height={456}
+          unoptimized={true} 
+          placeholder="blur" 
+          blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
+          className="local-loaded-pic"
+        />
       
+        <p>to "damn, is that a yellow-rumped warbler?"</p>
+
+        <Image 
+          src="/about/twitter-meme.jpg"
+          alt="A screenshot from Twitter, which reads: As you age, it's ridiculous how fast bird-watching creeps up on you. You spend your whole life being indifferent to birds, and then one day you're like, damn is that a yellow-rumped warbler?"
+          width={800} 
+          height={597}
+          unoptimized={true} 
+          placeholder="blur" 
+          blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
+          className="local-loaded-pic"
+        />
+
+        <p><i>A fun aside, my sister sent me that screenshot as I was literally standing on a birdwatching tower in Estonia...</i></p>
+
+        <p>There are two phenomenal tools I use to make identifications. Both are 100% free. As birds can exhibit radical {sexualDimorphism}, where the males and females look totally different, I find it helpful to use {merlin}, an app built and published by the {cornellLab}. Using this app I can input a few data points and be supplied with possible options for what I observed. What makes this particularly helpful is the inclusion of high quality images for each bird, and a definitive label for the sex of the bird in that image.</p> {/* LINK TO SEX DIMORPH & MERLIN */}
+
+        <Image 
+          src="/about/merlin.png"
+          alt="A screenshot from Merlin showing the visual difference between male and female red-winged blackbirds"
+          width={800} 
+          height={475}
+          unoptimized={true} 
+          placeholder="blur" 
+          blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
+          className="local-loaded-pic"
+        />
+
+        <p>In addition to Merlin, I use {iNaturalist} to make identifications of pretty much everything else. The approach I use here is to upload an image I have taken, mark where I observed it, and see what their machine learning algorithm suggests. It's usually very good at getting close to what's in the picture. The benefit of iNaturalist is how community-centric it is. I can upload something and say that it's an eastern carpenter ant, but that doesn't mean jack until two other users come along to confirm my identification. This method improves the quality of observations by adding confirmations and correcting errors.</p>
+
+        <Image 
+          src="/about/inat-upload.png"
+          alt="A screenshot from iNaturalist's upload page, showing the image and suggested IDs based"
+          width={800} 
+          height={552}
+          unoptimized={true} 
+          placeholder="blur" 
+          blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
+          className="local-loaded-pic"
+        />
+
+        <p>Between these two resources I can usually get the ID I need. On very rare occasions I'll venture over to Reddit and ask there, which is what I did before some kind user pointed me to iNaturalist. I have a preference for which interface I use, though. For Merlin, I much prefer their mobile app, as I'm usually marking the ID elsewhere for future reference, and not actually uploading the image I've taken. For iNaturalist, I much prefer their desktop browser interface. It is a better user experience, and I can include other helpful data annotations more easily than I can in mobile. I can also more easily review ID suggestions without losing my place in the upload process or committing myself to an incorrect identification that I'll subsequently need to rectify.</p>
+
+        <Image 
+          src="/about/inat-annotation.png"
+          alt="A screenshot from iNaturalist's observation page, showing the optional annotation fields available"
+          width={800} 
+          height={542}
+          unoptimized={true} 
+          placeholder="blur" 
+          blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
+          className="local-loaded-pic"
+        />
+
+        <p>Regardless of which tool I've used to identify what I've observed, when it comes time to include one of my best-of's in this portfolio I will use iNaturalist to get the scientific name. Common names may vary from region to region, and language to language, but the scientific name is the universal descriptor. By including this with my caption, I'm enabling anyone who's perusing this site to find that precise species independent of their native language.</p>
+
+        <p>***NEEDS A CONCLUSION***</p>
+
         {top}
       </section>
       
       <section id="software-engineer" className="about-content-block">
         <h3>Jacob as Software Engineer: No early days, just now</h3>
-        <h4>HEADING: engineering overview</h4>
-        <p>TOPIC: type of coding I do</p>
+        <h4>Engineering overview</h4>
+
         <p>I write front-end code, and I focus on digital accessibility. I aspire to be a more well-rounded engineer so I can always be helpful on either side of the software stack, which makes sense as I crave understanding the "whys" behind the "whats", and deeper understanding leads to more versaility and usefulness. I derive much greater satisfaction in highlighting the successes, the wins large and small, of my colleagues than I ever do in highlighting my own. My existing projects are written in JavaScript or TypeScript, and usually leverage the React framework for frontend interactivity.</p>
-        <p>TOPIC: searching for a project to build as practice</p>
+
         <p>In an ongoing effort to become that well-rounded engineer I easily find myself bouncing from one thing to the next. Should I learn python or Go? Should I dive into Node or Ruby? Hmmm, perhaps I should explore something related to database management? Choice paralysis hit pretty hard here. How would I break the impasse?</p>
       
         {top}
@@ -230,12 +309,10 @@ export default function About() {
 
       <section id="packages" className="about-content-block">
         <h4>There's a package for that</h4>
-        <p>TOPIC: trying to build a full window image viewer on my lonesome</p>
-        <p>One of the things I wanted to achieve with this portfolio is an intuitive way for a user to open an image in full screen mode on desktop (it doesn't make much sense to do so for mobile). After much trial and error and lost hours googling for tips and tricks, I remembered about the cornerstone of software development: open-source code. Surely there is someone out there who has built a project using the React framework who also wanted to achieve the same thing as me, and it was my hope that one of those someones published a package for others to use. Yes, there is! Huzzah!</p>
+        <p>One of the things I wanted to achieve with this portfolio is an intuitive way for a user to open an image in full screen mode on desktop or tablet. Even though I built this portfolio to be consumed on desktop, tablet, and mobile, this particular feature doesn't make much sense for mobile. After much trial and error and lost hours googling for tips and tricks, I remembered about the cornerstone of software development: open-source code. Surely there is someone out there who has built a project using the React framework who also wanted to achieve the same thing as me, and it was my hope that one of those someones published a package for others to use. Yes, there is! Huzzah!</p>
 
         <p>I was able to incorporate this into my code. I was finished with this key component! Or was I? Alas, a perfect solution was too much to hope for.</p>
 
-        <p>TOPIC: Overwriting ImageViewer to be accessible</p>
         <p>There were two pieces absent from this package, one of which is mission critical. While their code allowed for supplying dynamic image information so a user could go from one image to the next, it <em>hard coded</em> the alt text to be an empty string. An empty string representing a deliberate absence of alt text is only acceptable for non-essential images. So it's particularly odd for this package, as the whole point is that the image is significant. I either needed to find a new source, or I could tweak it by hand. I chose the latter.</p>
 
         <p>With open-source packages comes visibilty of the underlying code itself. My best recourse here was to copy in what I'll refer to as the baseline code, so that I could then force it to support basic accesibility practices. That resolved the mission critical piece. As I had pulled in the baseline code, I was then able to modify the entire structure of the component, so instead of simply being a full-screen image, I built in support for image context, like captioning text. Oh, hello Cloudinary custom metadata! It's good to see you again! Here's a simplified version of that modification:</p>
@@ -245,7 +322,7 @@ export default function About() {
 
         <p>Even if you don't know much about code, you can look at this and understand semantically what's going on, and how <code>{`figure / img / figcaption`}</code> makes more sense and looks cleaner than <code>{`div / div / img`}</code>, while providing additional information via that caption.</p>
         
-        <p>I made a design decision about how to display this caption. I did not want to sacrifice screen space by appending it below the image similar to what you may see on a news article; I wanted this to hover over a portion of the bottom of the image. I also wanted to allow the user to "dismiss" the caption and view the image without obstruction. I could achieve this by using a simple hover effect, so that when a user mouses over the image the caption appears, but this leaves out anyone who is navigating via keyboard.</p>
+        <p>I made a design decision about how to display this caption. I did not want to sacrifice screen space by appending it below the image similar to what you may see on a news article (and how mobile users will experience this portfolio); I wanted this to hover over a portion of the bottom of the image. I also wanted to allow the user to "dismiss" the caption and view the image without obstruction. I could achieve this by using a simple hover effect, so that when a user mouses over the image the caption appears, but this leaves out anyone who is navigating via keyboard.</p>
 
         <Image 
           src="/about/image-viewer-screenshot.png"
@@ -268,10 +345,12 @@ export default function About() {
       <section id="nextjs" className="about-content-block">
         <h4>Heading: Nextjs framework + TS</h4>
         <p>When it came time to deploy the project into production, I realized I hadn't taken into consideration what it means to have a full stack application running live. I learned there's a big gap between local development and live deployment of a server. The scope of the project had also changed along the way--from practice project to full-fledged portfolio--and that first iteration was over-engineered. More specifically, I did not need to support a user's ability to make modifications to my database, such as adding, changing, or deleting images. I came to the conclusion that I was going about it all wrong. I took a page from the startup playbook, and tore it all down to rebuild from scratch, using a different tech setup.</p>
+
         <p>While I did not need to support a server being live all the time, I still needed to execute server-specific tasks. Next.js is a frontend framework built on top of React, and solves this problem specifically. It provides a framework experience and natively supports serverless functions so that data can be fetched securely without the financial and environmental costs of keeping a server up and running at all hours of the day.</p>
+
         <p>TOPIC: serverless functions</p>
         <p>MAYBE MOVE THIS PART AROUND ELSEWHERE</p>
-        <p>While this was a full stack practice project designed to teach me more about backend coding that turned into a frontend portfolio without a dedicated backend, I learned far more about the backend by implementing serverless functions than I did from the tutorial. My data in Cloudinary is protected behind my user information. In order to access that for this portfolio, I needed to be able to tell Cloudinary that this application is in fact authorized to retrieve that data. Both Next.js and Cloudinary have built-in protections to block anyone from improperly executing a data fetch to protected content, and will throw errors when a fetch is called in an unsafe manner. Though serverless functions make it sound like it has nothing to do with backend code, they are in fact extracts of server-side code that will run without needing a dedicated server. As {serverlessFunction} </p> 
+        <p>While this was a full stack practice project designed to teach me more about backend coding that turned into a frontend portfolio without a dedicated backend, I learned far more about the backend by implementing serverless functions than I did from the original tutorial. My data in Cloudinary is protected behind my user information. In order to access that for this portfolio, I needed to be able to tell Cloudinary that this application is in fact authorized to retrieve that data, a task normally outsourced to a backend. Both Next.js and Cloudinary have built-in protections to block anyone from improperly executing a data fetch to protected content, and will throw errors when a fetch is called in an unsafe manner. Though serverless functions make it sound like it has nothing to do with backend code, they are in fact extracts of server-side code that will run without needing a dedicated server. As {serverlessFunction} </p> 
 
         <blockquote>
           Serverless Functions enable developers to write functions in JavaScript and other languages to handle user authentication, form submissions, database queries, custom Slack commands, and more. <br /> <br />
