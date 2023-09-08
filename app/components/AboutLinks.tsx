@@ -28,12 +28,57 @@ export const jasSE = (
 
 //* EXTERNAL:
 
+export const cornellLab = (
+  <Link 
+    href="https://www.birds.cornell.edu/home" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Cornell Lab of Ornithology
+  </Link>
+)
+
 export const dkEffect = (
   <Link 
     href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" 
     className="about-link" target="_blank" rel="external"
   >
     Dunning-Kruger Effect.
+  </Link>
+)
+
+export const iNaturalist = (
+  <Link 
+    href="https://www.inaturalist.org/" 
+    className="about-link" target="_blank" rel="external"
+  >
+    iNaturalist
+  </Link>
+)
+
+export const merlin = (
+  <Link 
+    href="https://merlin.allaboutbirds.org/" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Merlin
+  </Link>
+)
+
+export const opportunityCost = (
+  <Link 
+    href="https://en.wikipedia.org/wiki/Opportunity_cost" 
+    className="about-link" target="_blank" rel="external"
+  >
+    "opportunity cost"
+  </Link>
+)
+
+export const sexualDimorphism = (
+  <Link 
+    href="https://en.wikipedia.org/wiki/Sexual_dimorphism" 
+    className="about-link" target="_blank" rel="external"
+  >
+    sexual dimorphism
   </Link>
 )
 
@@ -58,7 +103,7 @@ export const serverlessFunction = (
 )
 
 
-//* Natural history related:
+//* BBC Natural history related:
 
 export const africa = (
   <Link 
@@ -83,7 +128,7 @@ export const bbcNHU = (
     href="https://en.wikipedia.org/wiki/BBC_Studios_Natural_History_Unit_filmography" 
     className="about-link" target="_blank" rel="external"
   >
-    <i>hundreds</i> of these!
+    <em>hundreds</em> of these!
   </Link>
 )
 
