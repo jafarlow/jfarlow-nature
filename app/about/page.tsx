@@ -23,7 +23,7 @@ export default function About() {
         <h3>Jacob as Nature Photographer: From the early days to now</h3>
         <h4>The Beginnings</h4>
 
-        <p>My photography journey began when I was about 8 years old, though admittedly, it was probably more of a way for my parents to help me expend energy on family vacations. Prior to our departure, my folks would pack a treat bag full of snacks and puzzle games that were to last us the duration of whatever vaction we were embarking upon, and this included a disposable Kodak camera.</p> 
+        <p>My photography journey began when I was about 8 years old, though admittedly, it was probably more of a way for my parents to help me expend energy on family vacations. Prior to our departure, my folks would pack a treat bag full of snacks and puzzle games that were to last us the duration of whatever vacation we were embarking upon, and this included a disposable Kodak camera.</p> 
 
         <p>Over many trips and the efforts of my mother to turn these rolls into scrapbooks, my folks must have seen something among the mess that resulted from a small rambunctious child given free reign to photograph whatever caught his eye. It was 'round about when I was 14 that my parents upgraded me from disposable Kodak to an Olympus digital point-and-shoot.</p>
       
@@ -66,14 +66,14 @@ export default function About() {
           <figcaption className="about-fig-cap">This rock dam in Cedarock Park was built in the early 1800s to divert the waters of the Rock Creek to power a gristmill. There's a lovely hiking trail that takes visitors from the historic farm down to this dam, and beyond into rolling forested hills.</figcaption>
         </figure>
 
-        <p>A few short years later, as a part of an art class we were directed to reproduce an image as a painting in the pointilist style. Without hesitation, I chose that photo from Cedarock Park as my subject.</p>
+        <p>A few short years later, as a part of an art class we were directed to reproduce an image as a painting in the pointillist style. Without hesitation, I chose that photo from Cedarock Park as my subject.</p>
 
-        <p>The beautiful simplicity of a digital point-and-shoot camera is how easy it is to carry everywhere. I developed a habit of sacrificing one of my pants pockets to hold this camera every single day. One might think this would lead to an abundance of photos from daily life, however that isn't how I viewed photography--I saw it as an opportunity to record the unusual, the special, the unexpected. While this means I carried it always, and used it rarely, it did mean I was prepared when in chemisty class we learned about surface area, licopodium powder, and explosions.</p>
+        <p>The beautiful simplicity of a digital point-and-shoot camera is how easy it is to carry everywhere. I developed a habit of sacrificing one of my pants pockets to hold this camera every single day. One might think this would lead to an abundance of photos from daily life, however that isn't how I viewed photography--I saw it as an opportunity to record the unusual, the special, the unexpected. While this means I carried it always, and used it rarely, it did mean I was prepared when in chemistry class we learned about surface area, lycopodium powder, and explosions.</p>
 
         <figure className="about-fig">
           <Image 
             src="/about/chemistry.jpg"
-            alt="Licopodium powder sprayed over an open flame explodes into a fireball"
+            alt="Lycopodium powder sprayed over an open flame explodes into a fireball"
             width={800} 
             height={600}
             unoptimized={true} 
@@ -81,7 +81,7 @@ export default function About() {
             blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
             className="about-pic"
           />
-          <figcaption className="about-fig-cap">A demonstration about why flour mills were prone to explosions in olden times, using pollen from the licopodium genus of plant as a stand-in. Clumped together, the power will burn just enough to form a crust on the surface. But dispersing it over a flame, increasing the amount of surface area of each particle exposed to the heat, triggers an explosive reaction.</figcaption>
+          <figcaption className="about-fig-cap">A demonstration about why flour mills were prone to explosions in olden times, using pollen from the lycopodium genus of plant as a stand-in. Clumped together, the power will burn just enough to form a crust on the surface. But dispersing it over a flame, increasing the amount of surface area of each particle exposed to the heat, triggers an explosive reaction.</figcaption>
         </figure>
 
         <p>In this moment I unlocked a new aspect of my photography: capturing moments of motion. It would take some dabbling in sports photography and plenty of "almost got it" experiences over the subsequent years before I would combine "movement" with "nature". But let's don't get ahead of the story.</p>
@@ -107,7 +107,7 @@ export default function About() {
           <figcaption className="about-fig-cap">The camera I bought: Canon EOS 40D with EF 35-128mm f/3.5-5.6 L IS lens. Image sourced from ulangansenin.blogspot.com</figcaption>
         </figure>
 
-        <p>Just like breaking in running shoes <em>before</em> a race, I learned the hard way that I should have had taken the same approach with this camera. A week after it arrived, we hopped on an airplane to visit Japan. Aside from having a wonderful time as a tourist, my photographic foray there was, predicatbly, about on par with my old point-and-shoot. Thankfully, I had a blast with it the whole time, and so rather than be discouraged I was motivated to improve.</p>
+        <p>Just like breaking in running shoes <em>before</em> a race, I learned the hard way that I should have taken the same approach with this camera. A week after it arrived, we hopped on an airplane to visit Japan. Aside from having a wonderful time as a tourist, my photographic foray there was, predictably, about on par with my old point-and-shoot. Thankfully, I had a blast with it the whole time, and so rather than be discouraged I was motivated to improve.</p>
 
         <p>Fast forward six months, and I had the opportunity of a lifetime to study for a semester in Italy, with an embarrassment of riches of subject matter: architecture, art, gardens, ruins, and vistas. It was during this time that my landscape photography really began to establish itself as a cornerstone of my skillset. The majority of my travels during this time kept me in Italy, though I did take a jaunt up to Switzerland to knock off a bucket list item of snowboarding in the Swiss Alps. I took a big risk by bringing my camera with me; afterall, it's a large piece of precision equipment, and knocking it around is not generally advisable. The risk paid off in a big way, giving me both my greatest moment in landscape photography (see landscapes in the gallery), as well as in action photography (see below).</p>
 
@@ -163,7 +163,7 @@ export default function About() {
           <figcaption className="about-fig-cap">My college roommate, Evan, catches me trying a sneaky candid shot.</figcaption>
         </figure>
 
-        <p>I tried sport photography. After all, that snowboarding photo was totally rad. I certainly gave myself plenty of attempts at it, as I brought my camera with me to football games, pickup soccer, rope swings, lacrosse games, and disc golf adventures. Each type of outing was just on the edge of hitting that feeling I was chasing. Even if I didn't settle on this as my path, I still got a kick out of it.</p>
+        <p>I tried sports photography. After all, that snowboarding photo was totally rad. I certainly gave myself plenty of attempts at it, as I brought my camera with me to football games, pickup soccer, rope swings, lacrosse games, and disc golf adventures. Each type of outing was just on the edge of hitting that feeling I was chasing. Even if I didn't settle on this as my path, I still got a kick out of it.</p>
 
         <figure className="about-fig">
           <Image 
@@ -221,9 +221,9 @@ export default function About() {
       <section id="plunge-redux" className="about-content-block">
         <h4>Taking the (financial) plunge redux</h4>
         <p>Also known as: new lens, new me.</p>
-        <p>It took two years of saving before I was in a position to upgrade to a new lens. I did extensive research of the different types of lenses, and what I could expect from them. There was one photographer's blog who wrote a really in-depth analysis of several of the lenses I had narrowed it down to (alas, I forgot who it was or I'd link it here). Based on what he worte and how he presented his test data and experimental efforts I was decided; I would get a 400mm lens. Aside from greater reach, this would always be at the 400mm mark, whereas my existing lens allowed me to vary that from 35 to 128mm; so basically greater reach with reduced lens versatility. I was pumped, and couldn't wait to buy it. I went to one online retailer. Oh, no, this isn't good. I went to another just in case. Oh, no, no. I went to a third to confirm the pattern. Oh, no, no, no. That lens costs as much as a quality used car. <em>Oof.</em></p>
+        <p>It took two years of saving before I was in a position to upgrade to a new lens. I did extensive research of the different types of lenses, and what I could expect from them. There was one photographer's blog who wrote a really in-depth analysis of several of the lenses I had narrowed it down to (alas, I forgot who it was or I'd link it here). Based on what he wrote and how he presented his test data and experimental efforts I was decided; I would get a 400mm lens. Aside from greater reach, this would always be at the 400mm mark, whereas my existing lens allowed me to vary that from 35 to 128mm; so basically greater reach with reduced lens versatility. I was pumped, and couldn't wait to buy it. I went to one online retailer. Oh, no, this isn't good. I went to another just in case. Oh, no, no. I went to a third to confirm the pattern. Oh, no, no, no. That lens costs as much as a quality used car. <em>Oof.</em></p>
 
-        <p>Okay, back to the article to revist what he wrote about my second option, the 100-400mm lens. I'm no technical expert when it comes to photography, so I make some assumptions I probably shouldn't.  What this means is that initially I assumed the 100-400mm was much better and, thus, far more expensive. Therefore, I had set that aside in favor of the lens that would still be good for me, but hopefully at a friendly-to-Jacob price point. Thankfully, I was very wrong. Coincidentally enough, the 100-400mm lens's focal length covers a range of a factor of 4 and that was also the price variance between the two lenses I was comparing. It was as if having the capability of modifying the focal length by 4x also reduced the price by 4x as well. I think the real reason is that the increased versatility leads to some loss in comparitive quality, but that might not be the complete picture (pun intended!).</p>
+        <p>Okay, back to the article to revisit what he wrote about my second option, the 100-400mm lens. I'm no technical expert when it comes to photography, so I make some assumptions I probably shouldn't.  What this means is that initially I assumed the 100-400mm was much better and, thus, far more expensive. Therefore, I had set that aside in favor of the lens that would still be good for me, but hopefully at a friendly-to-Jacob price point. Thankfully, I was very wrong. Coincidentally enough, the 100-400mm lens's focal length covers a range of a factor of 4 and that was also the price variance between the two lenses I was comparing. It was as if having the capability of modifying the focal length by 4x also reduced the price by 4x as well. I think the real reason is that the increased versatility leads to some loss in comparative quality, but that might not be the complete picture (pun intended!).</p>
 
         <figure className="about-fig">
           <Image 
@@ -239,7 +239,7 @@ export default function About() {
           <figcaption className="about-fig-cap">This is the beauty I bought: Canon EF 100-400mm f/4.5-5.6 L IS II USM lens. Image cropped from The-Digital-Picture.com</figcaption>
         </figure>
 
-        <p>Even though the lens I ultimately chose was four times less expensive, it remained a large financial investment. Like many things in life, in order to pursue one thing, we must refrain from pursuing another. In economics this can be referred to as an {opportunityCost}. Though it may seem like I'm being cavalier about upgrading to a very expensive lens, the reality is it was a culmination of careful longterm spending and saving, as well as forgoing future luxuries for a time. Some might not think a camera lens worth it, but for me this has been life changing.</p>
+        <p>Even though the lens I ultimately chose was four times less expensive, it remained a large financial investment. Like many things in life, in order to pursue one thing, we must refrain from pursuing another. In economics this can be referred to as an {opportunityCost}. Though it may seem like I'm being cavalier about upgrading to a very expensive lens, the reality is it was a culmination of careful long term spending and saving, as well as forgoing future luxuries for a time. Some might not think a camera lens worth it, but for me this has been life changing.</p>
         
         <p>I'm not being hyperbolic here. Because I made this purchase, I am more connected to the natural world; I'm finding contentment and mental stability and peace from more than just sweeping, grandiose vistas I mentioned previously; I see the fragility and beauty in all that surrounds us; I'm constantly learning more about how interconnected life is, and how it's far more complex than I could ever hope to convey; I feel a sense of urgency regarding climate action (or lack thereof) because I feel better able to see just how we continue to senselessly damage and destroy our environment.</p>
 
@@ -315,7 +315,7 @@ export default function About() {
             blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
             className="about-pic"
           />
-          <figcaption className="about-fig-cap">This screenshot is of the upload flow on desktop, with the machine learning algorithm having parsed the image and offering suggestions for what might be in the image. There are several types of lichen here, and the one I chose to mark as the most prominent featured ended up being bristly beard lichen <i>(Usnea hirta)</i>. It still needs community ID confirmation, so it remains in the {dataQuality} on the iNat website.</figcaption>
+          <figcaption className="about-fig-cap">This screenshot is of the upload flow on desktop, with the machine learning algorithm having parsed the image and offering suggestions for what might be in the image. There are several types of lichen here, and the one I chose to mark as the most prominently featured ended up being bristly beard lichen <i>(Usnea hirta)</i>. It still needs community ID confirmation, so it remains in the {dataQuality} on the iNat website.</figcaption>
         </figure>
 
         <p>Between these two resources I can usually get the ID I need. On very rare occasions I'll venture over to Reddit and ask there, which is what I did before some kind user pointed me to iNaturalist. I have a preference for which interface I use, though. For Merlin, I much prefer their mobile app, as I'm usually marking the ID elsewhere for future reference, and not actually uploading the image I've taken. For iNaturalist, I much prefer their desktop browser interface. It is a better user experience, and I can include other helpful data annotations more easily than I can in mobile. I can also more easily review ID suggestions without losing my place in the upload process or committing myself to an incorrect identification that I'll subsequently need to rectify.</p>
@@ -345,7 +345,7 @@ export default function About() {
         <h3>Jacob as Software Engineer: No early days, just now</h3>
         <h4>Engineering overview</h4>
 
-        <p>I write front-end code, and I focus on digital accessibility. I aspire to be a more well-rounded engineer so I can always be helpful on either side of the software stack, which makes sense as I crave understanding the "whys" behind the "whats", and deeper understanding leads to more versaility and usefulness. I derive much greater satisfaction in highlighting the successes, the wins large and small, of my colleagues than I ever do in highlighting my own. My existing projects are written in JavaScript or TypeScript, and usually leverage the React framework for frontend interactivity.</p>
+        <p>I write front-end code, and I focus on digital accessibility. I aspire to be a more well-rounded engineer so I can always be helpful on either side of the software stack, which makes sense as I crave understanding the "whys" behind the "whats", and deeper understanding leads to more versatility and usefulness. I derive much greater satisfaction in highlighting the successes, the wins large and small, of my colleagues than I ever do in highlighting my own. My existing projects are written in JavaScript or TypeScript, and usually leverage the React framework for frontend interactivity.</p>
 
         <p>In an ongoing effort to become that well-rounded engineer I easily find myself bouncing from one thing to the next. Should I learn python or Go? Should I dive into Node or Ruby? Hmmm, perhaps I should explore something related to database management? Choice paralysis hit pretty hard here. How would I break the impasse?</p>
       
@@ -357,7 +357,7 @@ export default function About() {
 
         <p>🎶 <i>It started with a whisperrrr...</i> 🎶 </p>
 
-        <p>Wait, no. It started with a tutorial. I decided to learn more about backend engineering, to get re-exposed to Nodejs & Express as a way to strengthen my overall engineering self. I found a {chrisBlakely} covering full stack development with React/Node/Express to build out a photo gallery using an API called Cloudinary, which I had never heard of before. Given my background (see the wall of text above) I was immediately interested. Afterall, one of the fundamental things about how I learn is to establish a personal connection to the subject matter. I like coding along to tutorials like this one as a way to learn how other people structure their code, and how they go from a blank file to a completed project. And once I've reached the end of a tutorial, I take it further: Is it accessible? Are there edge cases that need to be considered? How can I expand upon or otherwise modify what I coded along with? Can I incorporate something from one tutorial into another one? Are there projects I have already completed that could be refactored with my new experience?</p>
+        <p>Wait, no. It started with a tutorial. I decided to learn more about backend engineering, to get re-exposed to Nodejs & Express as a way to strengthen my overall engineering self. I found a {chrisBlakely} covering full stack development with React/Node/Express to build out a photo gallery using an API called Cloudinary, which I had never heard of before. Given my background (see the wall of text above) I was immediately interested. Afterall, one of the fundamental things about how I learn is to establish a personal connection to the subject matter. I like coding along with tutorials like this one as a way to learn how other people structure their code, and how they go from a blank file to a completed project. And once I've reached the end of a tutorial, I take it further: Is it accessible? Are there edge cases that need to be considered? How can I expand upon or otherwise modify what I coded along with? Can I incorporate something from one tutorial into another one? Are there projects I have already completed that could be refactored with my new experience?</p>
 
         <p>This project was no different, and I decided that rather than use JavaScript as the base language like the tutorial did, I would use TypeScript instead. Additionally, as I was tinkering with other ways to go beyond the tutorial, I decided to upgrade this from a practice project to something I wanted to publish to the world. More specifically, the idea took root when I was exploring Cloudinary's capabilities. One of the key requirements for including images on a webpage is to include alternate (alt) text to go along with it. This is required for people who use screen readers to understand what the image is supposed to represent, and is generally helpful in case images are slow (or otherwise fail) to load. Every image includes metadata with it, and some will have more than others depending on how the image was created. For example, a photograph's metadata will include time & date information based on the camera's settings, information about the camera itself (make & model), as well as settings used at the time of capture (ISO, f-stop, shutter speed, etc).</p>
 
@@ -388,7 +388,7 @@ export default function About() {
 
         <p>There were two pieces absent from this package, one of which is mission critical. While their code allowed for supplying dynamic image information so a user could go from one image to the next, it <em>hard coded</em> the alt text to be an empty string. An empty string representing a deliberate absence of alt text is only acceptable for non-essential images. So it's particularly odd for this package, as the whole point is that the image is significant. I either needed to find a new source, or I could tweak it by hand. I chose the latter.</p>
 
-        <p>With open-source packages comes visibilty of the underlying code itself. My best recourse here was to copy in what I'll refer to as the baseline code, so that I could then force it to support basic accesibility practices. That resolved the mission critical piece. As I had pulled in the baseline code, I was then able to modify the entire structure of the component, so instead of simply being a full-screen image, I built in support for image context, like captioning text. Oh, hello Cloudinary custom metadata! It's good to see you again! Here's a simplified version of that modification:</p>
+        <p>With open-source packages comes visibility of the underlying code itself. My best recourse here was to copy in what I'll refer to as the baseline code, so that I could then force it to support basic accessibility practices. That resolved the mission critical piece. As I had pulled in the baseline code, I was then able to modify the entire structure of the component, so instead of simply being a full-screen image, I built in support for image context, like captioning text. Oh, hello Cloudinary custom metadata! It's good to see you again! Here's a simplified version of that modification:</p>
 
         <pre role="code">{beforeMod}</pre>
         <pre role="code">{afterMod}</pre>
@@ -437,6 +437,8 @@ export default function About() {
         <p>Unraveling error messages as I attempted to leverage these serverless functions--a form of error-driven design--drove a deeper understanding of the backend, how it functions, and how to interact with it.</p>
       
         <p>Once I got that element functioning properly, I was off to the races. After all, I had a working prototype using React, so transposing that code into the new format was mostly straightforward. </p>
+
+        <p>***NEEDS A WRAP UP HERE TOO***</p>
         {top}
       </section>
 
