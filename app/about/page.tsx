@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 // extrapolating inline links out here so the body below looks cleaner
-import { dkEffect, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU, top, opportunityCost, iNaturalist, merlin, cornellLab, sexualDimorphism, daveGray, dataQuality } from "../components/AboutLinks"
+import { dkEffect, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU, top, opportunityCost, iNaturalist, merlin, cornellLab, sexualDimorphism, daveGray, dataQuality, pointillist } from "../components/AboutLinks"
 import { beforeMod, afterMod } from "../lib/codeBlocks"
 import AboutList from "../components/AboutList"
 import TableOfContents from "../components/TableOfContents"
@@ -66,7 +66,7 @@ export default function About() {
           <figcaption className="about-fig-cap">This rock dam in Cedarock Park was built in the early 1800s to divert the waters of the Rock Creek to power a gristmill. There's a lovely hiking trail that takes visitors from the historic farm down to this dam, and beyond into rolling forested hills.</figcaption>
         </figure>
 
-        <p>A few short years later, as a part of an art class we were directed to reproduce an image as a painting in the pointillist style. Without hesitation, I chose that photo from Cedarock Park as my subject.</p>
+        <p>A few short years later, as a part of an art class we were directed to reproduce an image as a painting in the {pointillist} style. Without hesitation, I chose that photo from Cedarock Park as my subject.</p>
 
         <p>The beautiful simplicity of a digital point-and-shoot camera is how easy it is to carry everywhere. I developed a habit of sacrificing one of my pants pockets to hold this camera every single day. One might think this would lead to an abundance of photos from daily life, however that isn't how I viewed photography--I saw it as an opportunity to record the unusual, the special, the unexpected. While this means I carried it always, and used it rarely, it did mean I was prepared when in chemistry class we learned about surface area, lycopodium powder, and explosions.</p>
 

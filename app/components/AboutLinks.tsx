@@ -82,6 +82,15 @@ export const opportunityCost = (
   </Link>
 )
 
+export const pointillist = (
+  <Link 
+  href="https://en.wikipedia.org/wiki/Pointillism" 
+  className="about-link" target="_blank" rel="external"
+>
+  pointillist
+</Link>
+)
+
 export const sexualDimorphism = (
   <Link 
     href="https://en.wikipedia.org/wiki/Sexual_dimorphism" 
