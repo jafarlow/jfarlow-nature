@@ -37,6 +37,15 @@ export const cornellLab = (
   </Link>
 )
 
+export const dataQuality = (
+  <Link 
+    href="https://www.inaturalist.org/pages/help#quality" 
+    className="about-link" target="_blank" rel="external"
+  >
+    "needs ID" category
+  </Link>
+)
+
 export const dkEffect = (
   <Link 
     href="https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect" 
@@ -93,12 +102,21 @@ export const chrisBlakely = (
   </Link>
 )
 
+export const daveGray = (
+  <Link 
+    href="https://www.youtube.com/watch?v=843nec-IvW0" 
+    className="about-link" target="_blank" rel="external"
+  >
+    <i>Next.js for Beginners</i> series by Dave Gray
+  </Link>
+)
+
 export const serverlessFunction = (
   <Link 
     href="https://vercel.com/docs/functions/serverless-functions" 
     className="about-link" target="_blank" rel="external"
   >
-    Vercel puts it:
+    puts it:
   </Link>
 )
 
