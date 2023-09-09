@@ -455,7 +455,18 @@ export default function About() {
 
         <p>I feel comfortable positing that most software engineers experience emotional extremes over the course of a project, and can appreciate why the culmination of this project has affected me so. Add in the nostalgia of revisiting the last 25 years of my life to write this mini-memoir (see {jasNP}), and it's perfectly understandable that I feel I've been put through the wringer. I'm hopeful that any non-engineer reading through this can also relate, which would indicate that I've done well enough as a writer, too.</p>
 
-        <p>And so now I leave you, friend, with this final thought. </p>
+        <p>And so now I leave you, friend, with this final thought inspired by a meme I saw once:
+          <br />
+          May you be as positive and forgiving of your "happy little accidents" as Bob Ross.
+          <br />
+          May you cultivate an endless passion for learning all things like Carl Sagan.
+          <br />
+          May you be as kind to yourself and your neighbors as Fred Rogers.
+          <br />
+          May you love all things in nature as passionately as Steve Irwin.
+        </p>
+
+        <p>Have a great day!</p>
 
         {top}
       </section>
