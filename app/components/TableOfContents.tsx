@@ -4,7 +4,7 @@ import { beginnings, connection, engineering, hobby, ids, nextjsSection, package
 export default function TableOfContents() {
   return (
     <>
-      <p>I'm not kidding when I mention this being overly verbose. The tl;dr (too long; didn't read) is that photography has been a part of my life for 25 years, and I'm a frontend software engineer who built this project from scratch. This project is built with Next.js and Typescript using Cloudinary as data host with Vercel as site host.</p>
+      <p>I'm not kidding when I mention this being overly verbose. The tl;dr (too long; didn't read) is that photography has been a part of my life for 25 years, and I'm a frontend software engineer who built this project from scratch. This portfolio is built with Next.js and Typescript using Cloudinary as data host with Vercel as site host.</p>
       <p>The tl;sr (too long; still read) can be navigated using the outline below:</p>
       <ul className="about-list">
         <li>{jasNP}</li>
