@@ -19,15 +19,18 @@ export default function HomeImage() {
   }, [])
 
   return (
-    <Image 
-      src={profilePic.path || ""} 
-      alt={profilePic.alt || ""} 
-      key={profilePic.id} 
-      width={800} 
-      height={450} 
-      unoptimized={true} 
-      placeholder="blur" 
-      blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
-      className="local-loaded-pic"/>
+    <figure className="about-fig">
+      <Image 
+        src={profilePic.path || ""} 
+        alt={profilePic.alt || ""} 
+        key={profilePic.id} 
+        width={800} 
+        height={450} 
+        unoptimized={true} 
+        placeholder="blur" 
+        blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
+        className="about-pic"/>
+      <figcaption className="about-fig-cap">{profilePic.location}</figcaption>
+    </figure>
   )
 }

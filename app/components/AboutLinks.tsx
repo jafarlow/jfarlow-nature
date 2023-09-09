@@ -28,6 +28,7 @@ export const jasSE = (
 
 //* EXTERNAL:
 
+//* Miscellaneous:
 export const cornellLab = (
   <Link 
     href="https://www.birds.cornell.edu/home" 
@@ -111,12 +112,57 @@ export const chrisBlakely = (
   </Link>
 )
 
+export const cloudinary = (
+  <Link 
+    href="https://cloudinary.com/" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Cloudinary
+  </Link>
+)
+
 export const daveGray = (
   <Link 
     href="https://www.youtube.com/watch?v=843nec-IvW0" 
     className="about-link" target="_blank" rel="external"
   >
     <i>Next.js for Beginners</i> series by Dave Gray
+  </Link>
+)
+
+export const express = (
+  <Link 
+    href="https://expressjs.com/" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Express
+  </Link>
+)
+
+export const nextjs = (
+  <Link 
+    href="https://nextjs.org/" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Next.js
+  </Link>
+)
+
+export const nodejs = (
+  <Link 
+    href="https://nodejs.org/en/about" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Node
+  </Link>
+)
+
+export const react = (
+  <Link 
+    href="https://react.dev/" 
+    className="about-link" target="_blank" rel="external"
+  >
+    React
   </Link>
 )
 
@@ -129,6 +175,14 @@ export const serverlessFunction = (
   </Link>
 )
 
+export const vercel = (
+  <Link 
+    href="https://vercel.com/home" 
+    className="about-link" target="_blank" rel="external"
+  >
+    Vercel
+  </Link>
+)
 
 //* BBC Natural history related:
 

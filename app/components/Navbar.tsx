@@ -6,7 +6,7 @@ export default function Navbar() {
     <header className='header-section'>
       <div className="header-wrapper">
         <div className="logo" >
-          <Link href="/" aria-label="JF logo">
+          <Link href="/" aria-label="JF logo" rel="internal">
             <img src="/jf-logo-white.png" alt=""/>
           </Link>
         </div>
@@ -15,8 +15,9 @@ export default function Navbar() {
           <p>Nature Photographer</p>
         </div>
         <nav>
-          <Link href="/" className="navlink">Home</Link>
-          <Link href="/gallery" className="navlink">Gallery</Link>
+          <Link href="/" className="navlink" rel="internal">Home</Link>
+          <Link href="/gallery" className="navlink" rel="internal">Gallery</Link>
+          <Link href="/about" className="navlink" rel="internal">About</Link>
         </nav>
       </div>
     </header>

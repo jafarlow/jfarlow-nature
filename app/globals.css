@@ -23,9 +23,9 @@ html, body {
   flex-grow: 1;
 }
 
-.home p {
-  max-width: 50rem;
-  margin: 0 auto;
+.home {
+  max-width: 62.5rem;
+  /* margin: 0 auto; */
 }
 
 .about {
@@ -123,7 +123,7 @@ nav {
   padding: 0 3rem;
 } */
 
-.about-content-block {
+.content-block {
   width: 100%;
   background-color: rgba(0,0,0,0.55);
   padding: 0 3rem;
@@ -177,6 +177,11 @@ code, pre {
 
 pre {
   overflow-x: scroll;
+}
+
+blockquote {
+  background-color: rgba(195, 149, 153, 0.25);
+  padding: 0.5rem;
 }
 
 span {
@@ -440,7 +445,7 @@ footer {
     margin: 0 2rem;
   }
 
-  .about, .local-loaded-pic, .about-pic {
+  .home, .about, .local-loaded-pic, .about-pic {
     max-width: 85vw;
   }
 
@@ -479,7 +484,7 @@ footer {
     font-size: 1.75rem;
   }
   
-  .about-content-block {
+  .content-block {
     padding: 0 1.5rem;
   }
 }
@@ -526,11 +531,11 @@ footer {
     font-size: 2.5rem;
   }
 
-  .home p , .about{
+  .home , .about{
     max-width: 85vw;
   }
 
-  .about-content-block {
+  .content-block {
     padding: 0 2rem;
   }
 
@@ -608,11 +613,11 @@ footer {
     margin: 0 0 2rem 0;
   }
 
-  .about-content-block {
+  .content-block {
     padding: 0 1rem;
   }
   
-  .about-content-block p {
+  .content-block p {
     text-align: justify;
     font-size: 1rem;
   }

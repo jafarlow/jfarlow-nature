@@ -47,12 +47,12 @@ export const ids = (
   </Link>
 )
 
-export const nextjs = (
+export const nextjsSection = (
   <Link 
     href="/about#nextjs" 
     className="about-link" rel="internal"
   >
-    Nextjs framework
+    Next.js, a new-to-Jacob framework
   </Link>
 )
 
@@ -89,5 +89,23 @@ export const portfolio = (
     className="about-link" rel="internal"
   >
     Beginning to build this portfolio
+  </Link>
+)
+
+export const theEnd = (
+  <Link 
+    href="/about#photo-wrapup" 
+    className="about-link" rel="internal"
+  >
+    The end?
+  </Link>
+)
+
+export const wrapup = (
+  <Link 
+    href="/about#wrapup" 
+    className="about-link" rel="internal"
+  >
+    Wrapping up
   </Link>
 )
