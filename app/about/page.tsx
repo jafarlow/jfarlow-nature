@@ -82,7 +82,7 @@ export default function About() {
             blurDataURL={"data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mNkKHKsZyACMI4qpK9CAG4PC/9UjHYEAAAAAElFTkSuQmCC "} 
             className="about-pic"
           />
-          <figcaption className="about-fig-cap">A demonstration about why flour mills were prone to explosions in olden times, using pollen from the lycopodium genus of plant as a stand-in. Clumped together, the power will burn just enough to form a crust on the surface. But dispersing it over a flame, increasing the amount of surface area of each particle exposed to the heat, triggers an explosive reaction.</figcaption>
+          <figcaption className="about-fig-cap">A demonstration about why flour mills were prone to explosions in olden times, using pollen from the lycopodium genus of plant as a stand-in. Clumped together, the powder will burn just enough to form a crust on the surface. But dispersing it over a flame, increasing the amount of surface area of each particle exposed to the heat, triggers an explosive reaction.</figcaption>
         </figure>
 
         <p>In this moment I unlocked a new aspect of my photography: capturing moments of motion. It would take some dabbling in sports photography and plenty of "almost got it" experiences over the subsequent years before I would combine "movement" with "nature". But let's don't get ahead of the story.</p>
