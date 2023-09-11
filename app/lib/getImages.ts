@@ -1,3 +1,5 @@
+import errorHandling from "./errorHandling"
+
 export default async function getImages(nextCursor:string) {
   const params = new URLSearchParams()
 
@@ -7,8 +9,7 @@ export default async function getImages(nextCursor:string) {
 
   const res = await fetch("../api/photos" + `?${params}`)
 
-  // TODO: write a better error handler
-  if(!res.ok) throw new Error("PANIC AT THE GETIMAGES FUNCTION")
+  if (!res.ok) errorHandling(res)
 
   const resJson = await res.json()
 

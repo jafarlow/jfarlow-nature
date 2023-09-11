@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { BASE_URL, API_KEY, API_SECRET } from "../../lib/auth"
+import { limiter } from "../config/limiter"
 
 // TODO: clear console logs and update max_results value
 export async function GET(req: NextRequest) {
@@ -20,10 +21,21 @@ export async function GET(req: NextRequest) {
   params.append('with_field[]', "metadata")
   
   if (next_cursor) {
-    params.append("next_cursor", next_cursor) // getting rid of the = from the string & assigning it to next_cursor
+    params.append("next_cursor", next_cursor)
   }
 
-  // console.log("GET PARAMS: ", params)
+  const remainingRequests = await limiter.removeTokens(1)
+
+  if (remainingRequests < 0) {
+    return new NextResponse(null, {
+      status: 429,
+      statusText: "Too many requests",
+      headers: {
+        "Content-Type": "text/plain",
+      }
+    })
+  }
+
 
   const res = await fetch(BASE_URL + '/resources/search' + `?${params}`, {
     method: "GET",
@@ -35,9 +47,5 @@ export async function GET(req: NextRequest) {
 
   const responseJson = await res.json()
 
-  // console.log("SEARCH RESPONSE JSON: ", responseJson)
-  // see console for printout
-  // console.log("CONTEXT: ", responseJson.resources[0].context)
-  // console.log("METADATA: ", responseJson.resources[0].metadata)
   return NextResponse.json(responseJson)
 }
