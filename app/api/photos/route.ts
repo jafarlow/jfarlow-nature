@@ -39,8 +39,5 @@ export async function GET(req: NextRequest) {
 
   const responseJson = await res.json()
 
-  // see console for printout
-  // console.log("CONTEXT: ", responseJson.resources[0].context)
-  // console.log("METADATA: ", responseJson.resources[0].metadata)
   return NextResponse.json(responseJson)
 }
