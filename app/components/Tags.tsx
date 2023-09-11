@@ -9,7 +9,6 @@ export default function Tags({checked, updateTagSearch}: Props) {
   // need to double call it for some odd reason...
   const tagsList = tags.tags
 
-  // TODO: Check if className of "test" is still needed here...
   return (
     <div id="tags-wrapper">
       {tagsList.map((tag:string, index) => (
@@ -17,7 +16,6 @@ export default function Tags({checked, updateTagSearch}: Props) {
           <input 
             type='checkbox'
             checked={checked.includes(tag)}
-            className='test'
             key={Math.random()}
             name={tag}
             id={tag}

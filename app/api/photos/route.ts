@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
   const [ next_cursor ] = Array.from(requrl.values())
 
   if (next_cursor) {
-    params.append("next_cursor", next_cursor) // getting rid of the = from the string & assigning it to next_cursor
+    params.append("next_cursor", next_cursor)
   }
 
   const remainingRequests = await limiter.removeTokens(1)

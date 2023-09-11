@@ -68,7 +68,6 @@
   cursor: pointer;
   position: absolute;
   font-size: 3.75rem;
-  /* line-height: 60px; */
   width: 4rem;
   font-weight: bold;
   display: flex;
@@ -98,13 +97,13 @@
   right: 0;
 }
 
-@media (max-width: 1081px) {
+/* 1081px */
+@media (max-width: 67.5625rem) {
   .wrapper {
     padding: 0;
   }
   .slide {
-    /* to account for L/R nav buttons */
-    width: calc(100% - 8rem);
+    width: calc(100% - 8rem); /* to account for L/R nav buttons */
   }
   .image {
     width: 100%;
@@ -117,8 +116,6 @@
     height: auto;
   }
   .prev, .next {
-    /* height: 60%; */
-    /* height: 128px; */
     padding: 0;
   }
 }
