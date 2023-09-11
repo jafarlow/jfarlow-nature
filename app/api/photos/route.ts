@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { BASE_URL, API_KEY, API_SECRET } from "../../lib/auth"
 import { NextRequest } from "next/server"
+import { limiter } from "../config/limiter"
 
 export async function GET(req: NextRequest) {
   const params = new URLSearchParams()
@@ -16,8 +17,17 @@ export async function GET(req: NextRequest) {
     params.append("next_cursor", next_cursor) // getting rid of the = from the string & assigning it to next_cursor
   }
 
-  // console.log("GET PARAMS: ", params)
-  // console.log("NEXT CURSOR: ", next_cursor ? next_cursor : "nah bro")
+  const remainingRequests = await limiter.removeTokens(1)
+
+  if (remainingRequests < 0) {
+    return new NextResponse(null, {
+      status: 429,
+      statusText: "Too many requests",
+      headers: {
+        "Content-Type": "text/plain",
+      }
+    })
+  }
 
   const res = await fetch(BASE_URL + '/resources/image' + `?${params}`, {
     method: "GET",
