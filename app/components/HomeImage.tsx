@@ -1,19 +1,22 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import profilePhotoData from "../../profilePhotoData.json"
 
-export default async function HomeImage() {
+export default function HomeImage() {
+  // using ` | any` here to avoid error on `.path/alt/id` for the {} prior to loading anything into state
+  const [profilePic, setProfilePic] = useState<ProfilePic | any>({}) 
   const photos: ProfilePic[] = profilePhotoData.photos 
 
   function getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }
 
-  function getPhoto() {
+  useEffect(() => {
     const num = getRandomInt(photos.length)
-    return photos[num]
-  }
-
-  const profilePic = getPhoto()
+    setProfilePic(photos[num])
+  }, [])
 
   return (
     <figure className="about-fig">
