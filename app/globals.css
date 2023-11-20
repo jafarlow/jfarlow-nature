@@ -336,11 +336,13 @@ label:focus-within,
   flex-direction: column;
 }
 
-.img-card:hover > .thumbnail {
+.img-card:hover > .thumbnail,
+.img-card:focus-visible > .thumbnail {
   border-color: #c1ccc5;
 }
 
-.img-card:hover > .img-footer {
+.img-card:hover > .img-footer,
+.img-card:focus-visible > .img-footer  {
   filter: invert(1);
 }
 
