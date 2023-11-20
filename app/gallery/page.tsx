@@ -127,7 +127,7 @@ export default function Gallery() {
   };
 
   // event type inferred from context
-  const keyboardNav = (e: React.KeyboardEvent<HTMLImageElement>, index: number) => {
+  const keyboardNav = (e: React.KeyboardEvent<HTMLDivElement>, index: number) => {
     if (e.defaultPrevented) {
       return;
     }
