@@ -5,7 +5,6 @@ type Props = {
   openImageViewer: (index: number) => void,
   // keyboardNav: (e: React.KeyboardEvent<HTMLImageElement>, index: number) => void //? For if the keydown is on the img element
   keyboardNav: (e: React.KeyboardEvent<HTMLDivElement>, index: number) => void //* For if the keydown is on the div element
-
 }
 
 export default function ImageGrid( {imageList, openImageViewer, keyboardNav}: Props ) {
