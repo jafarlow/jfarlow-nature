@@ -3,7 +3,9 @@
 type Props = {
   imageList: any[],
   openImageViewer: (index: number) => void,
-  keyboardNav: (e: React.KeyboardEvent<HTMLImageElement>, index: number) => void
+  // keyboardNav: (e: React.KeyboardEvent<HTMLImageElement>, index: number) => void //? For if the keydown is on the img element
+  keyboardNav: (e: React.KeyboardEvent<HTMLDivElement>, index: number) => void //* For if the keydown is on the div element
+
 }
 
 export default function ImageGrid( {imageList, openImageViewer, keyboardNav}: Props ) {
@@ -12,15 +14,17 @@ export default function ImageGrid( {imageList, openImageViewer, keyboardNav}: Pr
       <p className="instruction">Select an image to view it in full screen</p>
       <div className="image-grid">
         {imageList.map((image, index) => (
-          <div className="img-card" key={image.asset_id}>
+          <div 
+            className="img-card" key={image.asset_id}
+            onClick={ () => openImageViewer(index) }
+            onKeyDown={ (event) => keyboardNav(event,index)}
+            tabIndex={0}
+          >
             <img 
               className='thumbnail'
               src={image.secure_url} 
               alt={image.context?.custom?.alt || image.context?.alt || ""} 
-              onClick={ () => openImageViewer(index) }
-              onKeyDown={ (event) => keyboardNav(event,index)}
               // key={image.asset_id}
-              tabIndex={0}
               width={356}
               height={238}
             />
