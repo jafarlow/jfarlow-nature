@@ -330,6 +330,11 @@ label:focus-within,
   grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
 }
 
+.img-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .load-more {
   margin-top: 2rem;
   border: 0.125rem solid black;
@@ -391,6 +396,14 @@ footer {
   justify-content: center;
 }
 
+.img-footer {
+  height: fit-content;
+  border: none;
+  border-bottom: 0.2rem solid aliceblue;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.25rem 0.5rem 0.25rem; /* T R B L */
+} 
+
 .footer-section {
   display: flex;
   justify-content: center;
@@ -423,6 +436,11 @@ footer {
 @media (max-width: 95rem) {
   .App, .image-grid, .tags-form {
     width: auto;
+  }
+
+  .image-grid {
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
@@ -458,10 +476,10 @@ footer {
     font-size: 1rem;
   }
 
-  .image-grid {
+  /* .image-grid {
     margin-right: 1rem;
     margin-left: 1rem;
-  }
+  } */
 
   .mobile-image-grid {
     display: flex;
