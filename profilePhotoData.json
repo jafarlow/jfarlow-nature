@@ -69,6 +69,34 @@
       "name": "20220917_134015",
       "location": "Selfie taken in Altja, Lahemaa National Park, Estonia",
       "alt": "Selfie of Jacob wearing an orange jacket and hat, carrying a camera over his shoulder, standing among glacial boulders in a bay"
+    },
+    {
+      "id": 11,
+      "path": "/profile/20230621_101803.jpg",
+      "name": "20230621_101803",
+      "location": "Selfie taken at the Cathedral Rocks, Massachussets, USA",
+      "alt": "Selfie of Jacob wearing an orange jacket and hat, carrying a camera over his shoulder, standing in a bog"
+    },
+    {
+      "id": 12,
+      "path": "/profile/20231025_134104.jpg",
+      "name": "20231025_134104",
+      "location": "Selfie taken in the Prime Hook National Wildlife Refuge, Delaware, USA",
+      "alt": "Selfie of Jacob wearing an orange jacket and hat, carrying a camera over his shoulder, standing in a bog"
+    },
+    {
+      "id": 13,
+      "path": "/profile/20231026_160802.jpg",
+      "name": "20231026_160802",
+      "location": "Selfie taken in the Dismal Swamp State Park, North Carolina, USA",
+      "alt": "Selfie of Jacob wearing an orange jacket and hat, carrying a camera over his shoulder, standing in a bog"
+    },
+    {
+      "id": 14,
+      "path": "/profile/20231027_134336.jpg",
+      "name": "20231027_134336",
+      "location": "Selfie taken at the North Carolina Aquarium at Pine Knoll Shores, USA",
+      "alt": "Selfie of Jacob wearing an orange jacket and hat, carrying a camera over his shoulder, standing in a bog"
     }
   ]
 }
