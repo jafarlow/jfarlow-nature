@@ -69,6 +69,34 @@
       "name": "20220917_134015",
       "location": "Selfie taken in Altja, Lahemaa National Park, Estonia",
       "alt": "Selfie of Jacob wearing an orange jacket and hat, carrying a camera over his shoulder, standing among glacial boulders in a bay"
+    },
+    {
+      "id": 11,
+      "path": "/profile/20230621_101803.jpg",
+      "name": "20230621_101803",
+      "location": "Selfie taken at the Cathedral Rocks, Massachussets, USA",
+      "alt": "Selfie of Jacob on a rocky shore, wearing an olive colored hat, resting a camera on his shoulder"
+    },
+    {
+      "id": 12,
+      "path": "/profile/20231025_134104.jpg",
+      "name": "20231025_134104",
+      "location": "Selfie taken in the Prime Hook National Wildlife Refuge, Delaware, USA",
+      "alt": "Selfie of Jacob standing in a tidal marsh at low tide, with solar glare creating a streak effect on the image"
+    },
+    {
+      "id": 13,
+      "path": "/profile/20231026_160802.jpg",
+      "name": "20231026_160802",
+      "location": "Selfie taken along the primary canal in the Dismal Swamp State Park, North Carolina, USA",
+      "alt": "Selfie of Jacob wearing a hat and standing by a swamp canal that is so placid it resembles a mirror, which reflects the autumn colors in the foliage and the partially cloudy blue sky"
+    },
+    {
+      "id": 14,
+      "path": "/profile/20231027_134336.jpg",
+      "name": "20231027_134336",
+      "location": "Selfie taken at the North Carolina Aquarium at Pine Knoll Shores, USA",
+      "alt": "Selfie of Jacob wearing a hat and a blue shirt, standing in a tidal marsh with slow moving water and marsh grass dominating the background"
     }
   ]
 }
