@@ -232,12 +232,28 @@ p {
   font-size: 1.125rem;
 }
 
+/* THE NEXT TWO ARE FOR THE ACCORDION ACTION ON THE FORM */
+
+#tag-search {
+  max-height: 0;
+  opacity: 0;
+  transition: visibility 0s ease, max-height 1s ease, opacity 0.25s ease ;
+  visibility: hidden;
+}
+
+#tag-search:not([aria-hidden="true"]) {
+  max-height: 16.875rem; /* 270px */
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 12s ease, max-height 0.5s ease, opacity 1.25s ease ;
+}
+
 #tags-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid aliceblue; /* Leave border vals as px so they don't size-up with zoom*/
   padding-bottom: 0.5rem;
-  min-height: 6.25rem;
+  /* min-height: 6.25rem; */
   font-size: 1.125rem;
 }
 
