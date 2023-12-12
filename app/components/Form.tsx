@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react";
 import Tags from "./Tags"
 
 type Props = {
@@ -9,10 +12,25 @@ type Props = {
 }
 
 export default function Form( { checked, handleFormSubmit, updateTagSearch, clearSelection, resetSearch}: Props ) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleHiddenChange = () => {
+    setIsExpanded(!isExpanded)
+  }
+
   return (
     <>
-      <button id="accordion-trigger" aria-expanded="false" aria-controls="tag-search" type="button">View categories:</button>
-      <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form' role="region" aria-labelledby="accordion-trigger">
+      <button 
+        id="accordion-trigger" 
+        aria-controls="tag-search" 
+        aria-expanded={isExpanded} 
+        type="button" 
+        onClick={handleHiddenChange}
+      >
+        View categories:
+      </button>
+      <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form' role="region" aria-labelledby="accordion-trigger"
+        aria-hidden={!isExpanded}>
         <label htmlFor="tagsearch" id="form-label">Filter by category:</label>
         <Tags checked={checked} updateTagSearch={updateTagSearch}/>
         <div className="buttons-wrapper">
