@@ -297,7 +297,10 @@ label:focus-within,
 .buttons-wrapper button:focus-within,
 .load-more:hover,
 .load-more:active,
-.load-more:focus-within {
+.load-more:focus-within,
+#accordion-trigger:hover,
+#accordion-trigger:active,
+#accordion-trigger:focus-within {
   outline: #3daee9 solid 0.25rem;
 }
 
@@ -362,7 +365,7 @@ label:focus-within,
   filter: invert(1);
 }
 
-.load-more {
+.load-more, #accordion-trigger {
   margin-top: 2rem;
   border: 0.125rem solid black;
   border-radius: 0.33rem;
@@ -673,7 +676,7 @@ footer {
     max-width: 25rem;
   }
 
-  .load-more {
+  .load-more, #accordion-trigger {
     font-size: 1rem;
   }
 
