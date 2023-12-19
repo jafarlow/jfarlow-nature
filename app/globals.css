@@ -214,7 +214,7 @@ span {
 .tags-form {
   width: 65%;
   justify-content: space-between;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   margin-bottom: 1.5rem;
   border-bottom: 1px solid aliceblue; /* Leave border vals as px so they don't size-up with zoom*/
 }
@@ -243,6 +243,7 @@ p {
 
 #tag-search:not([aria-hidden="true"]) {
   max-height: 16.875rem; /* 270px */
+  margin-top: 1.5rem;
   opacity: 1;
   visibility: visible;
   transition: visibility 12s ease, max-height 0.5s ease, opacity 1.25s ease ;
@@ -648,6 +649,10 @@ footer {
 
   pre {
     font-size: 0.9rem;
+  }
+
+  #tag-search:not([aria-hidden="true"]) {
+    max-height: 21.875rem;
   }
 
   #tags-wrapper {
