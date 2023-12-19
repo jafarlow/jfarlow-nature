@@ -214,7 +214,7 @@ span {
 .tags-form {
   width: 65%;
   justify-content: space-between;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   margin-bottom: 1.5rem;
   border-bottom: 1px solid aliceblue; /* Leave border vals as px so they don't size-up with zoom*/
 }
@@ -232,12 +232,29 @@ p {
   font-size: 1.125rem;
 }
 
+/* THE NEXT TWO ARE FOR THE ACCORDION ACTION ON THE FORM */
+
+#tag-search {
+  max-height: 0;
+  opacity: 0;
+  transition: visibility 0s ease, max-height 1s ease, opacity 0.25s ease ;
+  visibility: hidden;
+}
+
+#tag-search:not([aria-hidden="true"]) {
+  max-height: 16.875rem; /* 270px */
+  margin-top: 1.5rem;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 12s ease, max-height 0.5s ease, opacity 1.25s ease ;
+}
+
 #tags-wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid aliceblue; /* Leave border vals as px so they don't size-up with zoom*/
   padding-bottom: 0.5rem;
-  min-height: 6.25rem;
+  /* min-height: 6.25rem; */
   font-size: 1.125rem;
 }
 
@@ -281,7 +298,10 @@ label:focus-within,
 .buttons-wrapper button:focus-within,
 .load-more:hover,
 .load-more:active,
-.load-more:focus-within {
+.load-more:focus-within,
+#accordion-trigger:hover,
+#accordion-trigger:active,
+#accordion-trigger:focus-within {
   outline: #3daee9 solid 0.25rem;
 }
 
@@ -346,12 +366,13 @@ label:focus-within,
   filter: invert(1);
 }
 
-.load-more {
+.load-more, #accordion-trigger {
   margin-top: 2rem;
   border: 0.125rem solid black;
   border-radius: 0.33rem;
   padding: 0.75rem;
   font-size: 1.0125rem;
+  line-height: 1.5rem; /* to cope with UTF-8 special character interfering with button text height*/
 }
 
 ImageViewer {
@@ -631,6 +652,10 @@ footer {
     font-size: 0.9rem;
   }
 
+  #tag-search:not([aria-hidden="true"]) {
+    max-height: 21.875rem;
+  }
+
   #tags-wrapper {
     grid-template-columns: repeat(3, 1fr);
     min-height: 12.5rem;
@@ -657,7 +682,7 @@ footer {
     max-width: 25rem;
   }
 
-  .load-more {
+  .load-more, #accordion-trigger {
     font-size: 1rem;
   }
 
