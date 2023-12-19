@@ -372,6 +372,7 @@ label:focus-within,
   border-radius: 0.33rem;
   padding: 0.75rem;
   font-size: 1.0125rem;
+  line-height: 1.5rem; /* to cope with UTF-8 special character interfering with button text height*/
 }
 
 ImageViewer {
