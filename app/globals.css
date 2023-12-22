@@ -113,7 +113,6 @@ nav {
   color: aliceblue;
   padding: 1rem;
   margin: 0.5rem;
-  /* border: #3daee9 2px solid; */ /* For helping to visualize testing */
   box-sizing: border-box;
 }
 
@@ -328,17 +327,6 @@ label:focus-within,
   box-sizing: border-box;
 }
 
-/* MOVING HOVER EFFECT TO IMG-CARD
-.thumbnail:hover {
-  z-index: 1;
-  background-color: black;
-  box-shadow: 
-    rgba(250, 250, 250, 0.6) 0.25rem 0.25rem 0.6rem 0.05rem,
-    rgba(250, 250, 250, 0.6) -0.25rem -0.25rem 0.6rem 0.05rem,
-    rgba(250, 250, 250, 0.6) 0.25rem -0.25rem 0.6rem 0.05rem, 
-    rgb(250, 250, 250, 0.6) -0.25rem .25rem 0.6rem 0.05rem;
-} */
-
 .grid-wrapper {
   display: flex;
   flex-direction: column;
@@ -508,11 +496,6 @@ footer {
   .tag {
     font-size: 1rem;
   }
-
-  /* .image-grid {
-    margin-right: 1rem;
-    margin-left: 1rem;
-  } */
 
   .mobile-image-grid {
     display: flex;
