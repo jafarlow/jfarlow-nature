@@ -5,22 +5,23 @@ import AboutList from "../components/AboutList"
 import TableOfContents from "../components/TableOfContents"
 
 // extrapolating inline links out here so the body below looks cleaner
-import { dkEffect, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU, top, opportunityCost, iNaturalist, merlin, cornellLab, sexualDimorphism, daveGray, dataQuality, pointillist, jasNP, nextjs, react, nodejs, express, cloudinary, vercel } from "../components/AboutLinks"
+import { dkEffect, springwatch, autumnwatch, winterwatch, planetEarth, serverlessFunction, chrisBlakely, bbcNHU, opportunityCost, iNaturalist, merlin, cornellLab, sexualDimorphism, daveGray, dataQuality, pointillist, jasNP, nextjs, react, nodejs, express, cloudinary, vercel } from "../components/AboutLinks"
+import { top } from "../components/ReturntoTop"
 import { beforeMod, afterMod } from "../lib/codeBlocks"
 
 export default function About() {
 
   return (
     <main className="about">
-      <section className="content-block">
-        <h2 id="top">About the Project</h2>
+      <section tabIndex={-1} id="top" className="content-block">
+        <h2>About the Project</h2>
 
         <p>This project represents two parts of myself: <i><b>Jacob as Nature Photographer</b></i>, and <i><b>Jacob as Software Engineer</b></i>. What follows is a bit of autobiographical waxing poetic combined with being overly verbose. Classic Jacob.</p>
 
         <TableOfContents />
       </section>
 
-      <section id="nature-photographer" className="content-block">
+      <section tabIndex={-1} id="nature-photographer" className="content-block">
         <h3>Jacob as Nature Photographer: From the early days to now</h3>
         <h4>The Beginnings</h4>
 
@@ -31,7 +32,7 @@ export default function About() {
         {top}
       </section>
       
-      <section id="hobby" className="content-block">
+      <section tabIndex={-1} id="hobby" className="content-block">
         <h4>There just might be something in this here hobby</h4>
         <p>Not long after this, I had the opportunity to bring my shiny new camera with me on the ski slopes of West Virginia's Winterplace ski resort. After tackling one of the runs, I turned around to look back up and thought to myself that it would make a pretty picture. I pulled out the camera, fell on my stomach, and snapped this photo:</p> 
 
@@ -90,7 +91,7 @@ export default function About() {
         {top}
       </section>
 
-      <section id="plunge" className="content-block">
+      <section tabIndex={-1} id="plunge" className="content-block">
         <h4>Taking the (financial) plunge</h4>
         <p>The seed was planted about upgrading my camera once again when a family friend learned of my interest in photography. She had a DSLR (digital single-lens reflex) camera, and when my family went for a visit she suggested I give her camera a try. Aside from the joy in trying out a new camera, I was honored that someone would trust 16 year old me with such an expensive piece of equipment. I spent an entire afternoon traipsing about their garden and forested property delighting in the new views I could explore. It would take another 3 years, but I took that financial plunge and purchased a Canon 40D, with a 35-128mm telephoto lens. This was one model removed from state of the art in Canon's lineup (at the time), with the basic all-around lens for someone on a budget who wants to diversify their subject matter. An SLR or DSLR camera is special in that it allows for interchangeable lenses, enabling people to adjust their focus (pun absolutely intended!) and reach. Without needing to buy a whole new camera, a photographer can swap out compatible lenses.</p>
 
@@ -203,7 +204,7 @@ export default function About() {
         {top}
       </section>
 
-      <section id="connection" className="content-block">
+      <section tabIndex={-1} id="connection" className="content-block">
         <h4>Connecting with nature</h4>
         <p>From the time I learned of the BBC's {planetEarth} in 2009 (thanks to the cool dude rockin' the Clemson t-shirt pictured above) I've been fascinated with natural history documentaries. Living in the US and pining for content from the UK generally meant being left wanting. Only the big productions were made available internationally, and so all I was aware of were those landmark productions featuring box-office names as narrators. Anything I found that was not narrated by a Hollywood icon or my hero, Sir David Attenborough, I stumbled into by roundabout means. Here are the ones I managed to get my hands on over the years:</p> 
 
@@ -219,7 +220,7 @@ export default function About() {
         {top}
       </section>
       
-      <section id="plunge-redux" className="content-block">
+      <section tabIndex={-1} id="plunge-redux" className="content-block">
         <h4>Taking the (financial) plunge redux</h4>
         <p>Also known as: new lens, new me.</p>
         <p>It took two years of saving before I was in a position to upgrade to a new lens. I did extensive research of the different types of lenses, and what I could expect from them. There was one photographer's blog who wrote a really in-depth analysis of several of the lenses I had narrowed it down to (alas, I forgot who it was or I'd link it here). Based on what he wrote and how he presented his test data and experimental efforts I was decided; I would get a 400mm lens. Aside from greater reach, this would always be at the 400mm mark, whereas my existing lens allowed me to vary that from 35 to 128mm; so basically greater reach with reduced lens versatility. I was pumped, and couldn't wait to buy it. I went to one online retailer. Oh, no, this isn't good. I went to another just in case. Oh, no, no. I went to a third to confirm the pattern. Oh, no, no, no. That lens costs as much as a quality used car. <em>Oof.</em></p>
@@ -249,7 +250,7 @@ export default function About() {
         {top}
       </section>
 
-      <section id="making-ids" className="content-block">
+      <section tabIndex={-1} id="making-ids" className="content-block">
         <h4>What's that thing?</h4>
         <p>Of course, in order to achieve my goal here I first must correctly identify what it is I have captured. I want to be able to go from "hmm yes, the floor is made of floor":</p>
 
@@ -340,7 +341,7 @@ export default function About() {
         {top}
       </section>
 
-      <section id="photo-wrapup" className="content-block">
+      <section tabIndex={-1} id="photo-wrapup" className="content-block">
         <h4>The end?</h4>
         <p>For this write-up on <i><b>Jacob as Nature Photographer</b></i>, perhaps. Certainly not in regards to my photographic endeavors, which I feel are only just beginning. It's an odd thing to type, considering my 25 years of photography thus far; there's just so much more to explore! Will there be yet another (financial) plunge in my future where I pick up a macro lens so I can get even more immersed in the invertebrate world? What forays can I embark upon, both near and far? What new fascinating aspects of the natural world will I get to experience? My new favorite biome is wetlands, especially after having a blast traipsing about bogs and mires in the Baltic in 2022. I haven't done much of that type of exploring in my native USA, so that's certainly a focus point for me. Who knows?</p>
 
@@ -349,7 +350,7 @@ export default function About() {
         {top}
       </section>
       
-      <section id="software-engineer" className="content-block">
+      <section tabIndex={-1} id="software-engineer" className="content-block">
         <h3>Jacob as Software Engineer: No early days, just now</h3>
         <h4>Engineering overview</h4>
 
@@ -360,7 +361,7 @@ export default function About() {
         {top}
       </section>
       
-      <section id="portfolio" className="content-block">
+      <section tabIndex={-1} id="portfolio" className="content-block">
         <h4>Beginning to build this portfolio</h4>
 
         <p>🎶 <i>It started with a whisperrrr...</i> 🎶 </p>
@@ -388,7 +389,7 @@ export default function About() {
         {top}
       </section>
 
-      <section id="packages" className="content-block">
+      <section tabIndex={-1} id="packages" className="content-block">
         <h4>There's a package for that</h4>
         <p>One of the things I wanted to achieve with this portfolio is an intuitive way for a user to open an image in full screen mode on desktop or tablet. Even though I built this portfolio to be consumed on desktop, tablet, and mobile, this particular feature doesn't make much sense for mobile. After much trial and error and lost hours googling for tips and tricks, I remembered about the cornerstone of software development: open-source code. Surely there is someone out there who has built a project using the React framework who also wanted to achieve the same thing as me, and it was my hope that one of those someones published a package for others to use. Yes, there is! Huzzah!</p>
 
@@ -426,7 +427,7 @@ export default function About() {
         {top}
       </section>
 
-      <section id="nextjs" className="content-block">
+      <section tabIndex={-1} id="nextjs" className="content-block">
         <h4>Next.js, a new-to-Jacob framework</h4>
         <p>When it came time to deploy the project into production, I realized I hadn't taken into consideration what it means to have a full stack application running live. I learned there's a big gap between local development and live deployment of a server. The scope of the project had also changed along the way--from practice project to full-fledged portfolio--and that first iteration was over-engineered. More specifically, I did not need to support a user's ability to make modifications to my database, such as adding, changing, or deleting images. I came to the conclusion that I was going about it all wrong. I took a page from the startup playbook, and tore it all down to rebuild from scratch, using a different tech setup.</p>
 
@@ -449,7 +450,7 @@ export default function About() {
         {top}
         </section>
 
-      <section id="wrapup" className="content-block">
+      <section tabIndex={-1} id="wrapup" className="content-block">
         <h4>Wrapping up</h4>
         <p>Being on my own, building a passion project that has stretched my skills, I've felt sustained pressure, like I'm an imposter or that I don't <em>really</em> know what I'm doing. It's easy to get down on myself. After all, I am my own toughest critic. So to feel it all come together, to feel it <em>flow</em> has been the greatest validation of <i><b>Jacob as Software Engineer</b></i>. As I type this, I'm honestly holding back tears.</p>
 
