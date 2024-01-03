@@ -8,3 +8,6 @@ Version 1.1
 
 Version 1.2
   - Added accordion feature to the filter categories for improved look & feel, and screen space management
+
+Version 1.3
+  - Fixed keyboard navigation involving jump links on the About page
