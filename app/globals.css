@@ -177,9 +177,9 @@ blockquote {
   padding: 0.5rem;
 }
 
-span {
+/* span {
   font-style: italic;
-}
+} */
 
 .local-loaded-pic, .about-pic {
   max-width: 100vw;

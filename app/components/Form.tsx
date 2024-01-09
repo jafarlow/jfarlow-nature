@@ -14,9 +14,13 @@ type Props = {
 export default function Form( { checked, handleFormSubmit, updateTagSearch, clearSelection, resetSearch}: Props ) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [buttonText, setButtonText] = useState("View")
-  const [buttonTextCode, setButtonTextCode] = useState(11208)
-  // UTF-8 decimal values for stylized arrows: 11208 for right arrow, 11206 for down arrow
-  // https://www.w3schools.com/charsets/ref_utf_arrows.asp
+  const [buttonTextCode, setButtonTextCode] = useState('&#9656;')
+  // UTF-8 decimal values for stylized arrows: 9656 for right arrow, 9662 for down arrow
+  // https://www.w3schools.com/charsets/ref_html_entities_d.asp
+
+  //! requires using dangerouslySetInnerHTML in order to parse this into HTML text
+  // previously using `String.fromCodePoint()` requires UTF-16, which would break browser experiences that do no support it as a default
+  // caused confusion b/c Ubuntu *does* support UTF-16, but Windows & Android do not, so my testing showed it working fine, whereas everywhere else it was broken
 
   const handleHiddenChange = () => {
     setIsExpanded(!isExpanded)
@@ -24,8 +28,8 @@ export default function Form( { checked, handleFormSubmit, updateTagSearch, clea
     if (buttonText === "View") setButtonText("Hide")
     else setButtonText("View")
 
-    if (buttonTextCode === 11208) setButtonTextCode(11206)
-    else setButtonTextCode(11208)
+    if (buttonTextCode === '&#9662;') setButtonTextCode('&#9656;')
+    else setButtonTextCode('&#9662;')
   }
 
   return (
@@ -37,7 +41,7 @@ export default function Form( { checked, handleFormSubmit, updateTagSearch, clea
         type="button" 
         onClick={handleHiddenChange}
       >
-        {buttonText} categories {String.fromCharCode(buttonTextCode)}
+        {buttonText} categories <span dangerouslySetInnerHTML={{__html: buttonTextCode}}></span>
       </button>
       <form onSubmit={handleFormSubmit} id="tag-search" className='tags-form' role="region" aria-labelledby="accordion-trigger"
         aria-hidden={!isExpanded}>
