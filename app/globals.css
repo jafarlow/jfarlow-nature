@@ -354,6 +354,7 @@ label:focus-within,
 .img-card:hover > .img-footer,
 .img-card:focus-visible > .img-footer  {
   filter: invert(1);
+  font-weight: bold;
 }
 
 .load-more, #accordion-trigger {
