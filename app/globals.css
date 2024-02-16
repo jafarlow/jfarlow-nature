@@ -266,6 +266,9 @@ p {
   font-size: 1.125rem;
   margin-left: 0.5rem;
   font-weight: bold;
+  background-color: rgba(45,45,45);
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
   border-bottom: 1px solid aliceblue; /* Leave border vals as px so they don't size-up with zoom*/
 }
 
@@ -317,6 +320,9 @@ label:focus-within,
 .instruction {
   margin: 0 auto 1.5rem auto;
   font-style: italic;
+  background-color: rgba(45,45,45);
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .thumbnail {
