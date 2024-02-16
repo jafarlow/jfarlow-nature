@@ -9,7 +9,9 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,87,18,1) 50%, rgba(2,0,36,1) 100%); 
+  /* background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,87,18,1) 50%, rgba(2,0,36,1) 100%);  */
+  background: rgb(103,230,110);
+  background: radial-gradient(circle, rgba(103,230,110,1) 0%, rgba(50,48,93,1) 100%); 
   color: aliceblue;
 }
 
