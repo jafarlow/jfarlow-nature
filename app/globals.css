@@ -9,7 +9,9 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,87,18,1) 50%, rgba(2,0,36,1) 100%); 
+  /* background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,87,18,1) 50%, rgba(2,0,36,1) 100%);  */
+  background: rgb(103,230,110);
+  background: radial-gradient(circle, rgba(103,230,110,1) 0%, rgba(50,48,93,1) 100%); 
   color: aliceblue;
 }
 
@@ -63,7 +65,8 @@ h4 {
 
 .header-section {
   border-bottom: 0.2rem solid aliceblue;
-  background-color: rgba(0,0,0,0.75);
+  /* background-color: rgba(0,0,0,0.75); */
+  background-color: rgba(45,45,45);
   height: 8rem;
   color: aliceblue;
   display: flex;
@@ -118,7 +121,8 @@ nav {
 
 .content-block {
   width: 100%;
-  background-color: rgba(0,0,0,0.55);
+  /* background-color: rgba(0,0,0,0.55); */
+  background-color: rgba(45,45,45);
   padding: 0 3rem;
   margin-top: 2rem;
 }
@@ -262,6 +266,9 @@ p {
   font-size: 1.125rem;
   margin-left: 0.5rem;
   font-weight: bold;
+  background-color: rgba(45,45,45);
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
   border-bottom: 1px solid aliceblue; /* Leave border vals as px so they don't size-up with zoom*/
 }
 
@@ -313,6 +320,9 @@ label:focus-within,
 .instruction {
   margin: 0 auto 1.5rem auto;
   font-style: italic;
+  background-color: rgba(45,45,45);
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .thumbnail {
@@ -352,6 +362,7 @@ label:focus-within,
 .img-card:hover > .img-footer,
 .img-card:focus-visible > .img-footer  {
   filter: invert(1);
+  font-weight: bold;
 }
 
 .load-more, #accordion-trigger {
@@ -408,7 +419,9 @@ figcaption {
 
 footer {
   border-top: 0.2rem solid aliceblue;
-  background-color: rgba(0,0,0,0.75);
+  /* background-color: rgba(0,0,0,0.75); */
+  background-color: rgba(25,25,25);
+
   height: 6rem;
   color: aliceblue;
   display: flex;

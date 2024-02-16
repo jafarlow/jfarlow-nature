@@ -11,3 +11,7 @@ Version 1.2
 
 Version 1.3
   - Fixed keyboard navigation involving jump links on the About page
+
+Version 1.4
+  - Updated background gradient color, with adjustments to other color settings to maintain accessible contrast ratios
+  - Fixed list structure on About page to conform with industry standards
