@@ -214,6 +214,12 @@ blockquote {
   flex-grow: 1;
 }
 
+/* ! FOR THE IMAGE VIEWER SCROLL BAR */
+/* * Putting here because the event call happens on the gallery page and not on the image viewer itself */
+.hidden {
+  overflow: hidden;
+}
+
 .tags-form {
   width: 65%;
   justify-content: space-between;

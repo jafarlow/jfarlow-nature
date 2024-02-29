@@ -119,11 +119,15 @@ export default function Gallery() {
   const openImageViewer = useCallback((index: number) => {
     setCurrentImage(index);
     setIsViewerOpen(true);
+    let body = document.querySelector("body")
+    body?.classList.add("hidden") // CSS to hide the scrollbar upon entering fullscreen view
   }, []);
 
   const closeImageViewer = () => {
     setCurrentImage(0);
     setIsViewerOpen(false);
+    let body = document.querySelector("body")
+    body?.classList.remove("hidden") // CSS to show the scrollbar upon exiting fullscreen view
   };
 
   // event type inferred from context

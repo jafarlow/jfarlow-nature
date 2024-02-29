@@ -15,3 +15,6 @@ Version 1.3
 Version 1.4
   - Updated background gradient color, with adjustments to other color settings to maintain accessible contrast ratios
   - Fixed list structure on About page to conform with industry standards
+
+Version 1.5
+  - Removed scrollbar from fullscreen view of the image viewer
